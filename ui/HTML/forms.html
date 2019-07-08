@@ -4,20 +4,25 @@
 	<title>Forms</title>
 	<!-- [type=text],input[type=number],input[type= -->
 	<style type="text/css">
+	tr :nth-child(even) {
+		background: linear-gradient(0deg,white,#ffff62);
+	}
 	img{
 		margin: 10 10 10 10px;
 		border-radius: 3px;
 		border:2px;
+		height: 30px;
 		/* float: right; */
 	}
 	  code{
 		  font-size: 15px;
 	  }
-
+	
 		input{
 			border: 1px  solid green;
 		    border-radius: 7px;
-		    height: 20px;
+			height: 20px;
+			background: linear-gradient(0deg,white,#c5cbea);
 		}
 		/*use percentage here*/
 		input[type=submit]{
@@ -28,6 +33,7 @@
 		    height: 30px;
 		}
 		fieldset{
+			background:linear-gradient(90deg,#ffff62,white,#c5cbea);
 			font-weight: bold;
 			font-style: normal;
 			border-color: #395a39;
@@ -49,7 +55,9 @@
 		body{
 			font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;	
 			font-style:italic;
-			background:url("body.jpg")
+			/* background:url("body.jpg")
+		 */
+		 background: linear-gradient(90deg,white ,yellow 20%,red 20%,black 20%,yellow 20%,green );
 		}
 		nav table th a {
 			text-decoration: none;
@@ -65,13 +73,13 @@
 <body >
 <nav>
 	<table>
-		<th>
-			<a href="" >Home</a>
+		<td>
+			<a href="" ><img src="home.png"></a>
 			&nbsp;&nbsp;
-			<a href="">About Us</a>
+			<a href=""><img src="git.jpg"></a>
 			&nbsp;&nbsp;
-			<a href="">Contact Us</a>
-		</th>
+			<a href=""><img src="phone.jpg"></a>
+		</td>
 	</table>
 		
 			
@@ -79,7 +87,7 @@
 
 </nav>
 
-	<form name="userDetails" method="GET" action="">
+	<form name="userDetails" metdod="GET" action="">
 
 <fieldset>
 	<legend>User Deatails</legend>
@@ -87,58 +95,58 @@
 	<hr>
 	
 <table border="2">
-	<thead>
-		<!-- <tr><th colspan="2">User Details</th></tr> -->
+	<tdead>
+		<!-- <tr><td colspan="2">User Details</td></tr> -->
 		<tr>
-			<th>
+			<td>
 				First Name
-			</th>
-			<th>
+			</td>
+			<td>
 				Last Name
-			</th>
-			<th>
+			</td>
+			<td>
 				phone
-			</th>
-			<th>
+			</td>
+			<td>
 				age
-			</th>
-			<th>
+			</td>
+			<td>
 				date
-			</th>
-			<th>
+			</td>
+			<td>
 				time
-			</th>
+			</td>
 		</tr>
-	</thead>
+	</tdead>
 	<tbody>
 		<tr>
-			<th>
-				<input type="text" name="fname" placeholder="Enter name" />
-			</th>
-			<th>
+			<td>
+				<input type="text" name="fname" placeholder="Enter name" required />
+			</td>
+			<td>
 				<input type="text" name="lname" placeholder="Last Name">
-			</th>
-			<th>
-			<input type="tel" name="pno"></th>
-			<th>
+			</td>
+			<td>
+			<input type="tel" name="pno"></td>
+			<td>
 				<input type="number" name="age" min="18">
-			</th>
-			<th>
+			</td>
+			<td>
 				<input type="date" name="dob">
-			</th>
-			<th>
+			</td>
+			<td>
 				<input type="time" name="time">
-			</th>
+			</td>
 		</tr>
 		<tr>
-			<th colspan="2"> 
+			<td colspan="2" id="btna"> 
 				<input type="submit" name="save" value="save">
 				<!-- formaction in submit formholder(GET,POST)
 				HTML5 validation --	email, date , number
 
 
 				 -->
-			</th>
+			</td>
 		</tr>
 	</tbody>
 </table>
@@ -171,5 +179,9 @@ sprite image
 
 
 -->
+<fieldset>
+	<legend>match</legend>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/Lpv7S-VdQh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</fieldset>
 </body>
 </html>
