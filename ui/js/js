@@ -1,0 +1,31 @@
+js - client side
+intrepreter / parsing and intrepretation
+
+DOM - document object model
+
+1 window
+2 document
+
+data types:
+ var -- can hold any variable (type casting is dynamic)
+ local - let
+ global -  
+ constant - const
+
+ uses/ benifits:
+ 	validations
+ 	event handling
+
+functional programing:
+       dependate on function
+
+ oop:
+ 		class method
+
+
+
+arrays 
+let vals=[1,4,"hello"]
+
+
+
