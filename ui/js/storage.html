@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>storage</title>
+            <style>
+                table{
+                    background: linear-gradient(0deg,orange,green,white);
+                    border: 3px solid black;
+                    margin: 50px;
+                }
+                input{
+                    height: 30px;
+                    margin-top: 15px;
+                    display: block;
+                    border-radius: 5px;
+                    max-width: 150px;
+                }
+            td{ 
+            
+                background: linear-gradient(0deg,#9e9eff,white);
+            border: 1px solid black;
+        }
+            </style>
+            
+        
+        <script src="storage.js">
+
+        </script>
+    </head>
+    <body>
+        <input type="text" name="name" id="name" placeholder="enter name">
+        <input type="text" id="email" name="email" placeholder="enter email">
+        <input type="text" id="org"name="org" placeholder="enter Organisation">
+        <input type="button" value="store to local" id="store" onclick="storeTolocal()">
+        <div id="table-div">
+
+
+        </div>
+
+        </body>
+</html>

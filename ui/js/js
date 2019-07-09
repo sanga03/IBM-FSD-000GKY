@@ -29,3 +29,16 @@ let vals=[1,4,"hello"]
 
 
 
+local storage --browser  (10 MB to storage) different availiblity (browser)
+
+  const saveLocalStore(){
+  	localStorage.setItem("message","the message");
+  }
+  saveLocalStore();
+
+ session storage -- respective of tab (every browser tab)
+     				j session ID
+     				
+
+     				
+

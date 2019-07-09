@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		th :nth-child(even) {
+		background: linear-gradient(90deg,white,#ffff62);
+	}
+		table, th, td {
+  border: 2px solid brown;
+}
+		
+		</style>
 	<title>js</title>
 	<script type="text/javascript" src="hello.js">
 		// console.log('Hello Worlds!');
 		// document.write("welcomr");
+
 	</script>
 </head>
 <body>
+ English:<input type="number" id="eng">
+ Mathematics:<input type="number" id="mat">
+Computer Science:<input type="number" id="cse">
+<input type="submit" value="check" id="submit" onclick="check_marks()">
+<br>
+<div id = "table">
+	
+</div>
 
+<table>
+	<tr>
+		<th> Name </th>
+		<th> email </th>
+		<th> Organizarion </th>
+	</tr>
+	<tr>
+		<td> Name </td>
+		<td> email </td>
+		<td> Organizarion </td>
+	</tr>
+</table>
 </body>
 </html>
