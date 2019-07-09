@@ -41,4 +41,32 @@ local storage --browser  (10 MB to storage) different availiblity (browser)
      				
 
      				
+   maps(new val is updated with the same key)
+    const maps = new Map()
+
+   maps.set("key","val");
+   for()
+
+   set (used in frequence search)
+// avoids duplication (new val is discarded)
+
+   const set = new Set()
+   set.add("hello")
+    for(lete item in set){
+    	log(item)
+    }
+
+weak  map:
+
+  key should be object references
+
+  map function
+   emaps.map(e=>{
+   	return{
+   		name = e.name+" just"+e.surname;
+   	}
+   })
+
+
+
 
