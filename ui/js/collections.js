@@ -65,3 +65,5 @@ msgs.flatMap(m=>{
 }).forEach(element => {
     console.log(element);
 });
+window.open("https://google.com");
+console.log(Boolean(10>9));
