@@ -63,10 +63,20 @@ weak  map:
   map function
    emaps.map(e=>{
    	return{
-   		name = e.name+" just"+e.surname;
+   		name = e.name+" just"+e.surname; 
    	}
    })
 
 
+   reduce =>
+   map.reduce((_p,_mn)=>{
+   	return _p+_mn
+   })
+   
 
+
+reduceRight() => from right to left
+
+
+accumalotors by organisation
 

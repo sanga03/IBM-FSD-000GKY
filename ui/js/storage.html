@@ -22,11 +22,11 @@
             </style>
             
         
-        <script src="storage.js">
+        <script src="storage_object.js">
 
         </script>
     </head>
-    <body>
+    <body onload="onload()">
         <input type="text" name="name" id="name" placeholder="enter name">
         <input type="text" id="email" name="email" placeholder="enter email">
         <input type="text" id="org"name="org" placeholder="enter Organisation">
@@ -34,6 +34,7 @@
        
                 <input type="text" id="emsearch"name="emsearch" placeholder="enter email to delete">
                 <input type="button" value="delete to local" id="store" onclick="deleteLocal()">
+                <input type="button" value="delete all" id="store" onclick="deleteall()">
                 <div id="table-div">
         </div>
 
