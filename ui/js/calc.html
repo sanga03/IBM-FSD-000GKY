@@ -1,38 +1,67 @@
 <html>
     
 <head>
+ <style>
+ input{
+     margin: 5px;
+     border-radius: 6px;
+     color: brown;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 20px;
+     
+      }
+      input[type="text"]{
+          color: blue;
+          max-width: 6em;
+      }
+      input[type="button"]{
+          size: 10px;
+          box-shadow:3px 1px #888888;
+      }
+ td{
+     margin-top: 10px;
+ }
+
+ fieldset{
+     float: center;
+ }
+ </style>
+ 
     <script src="calc.js"></script>
 </head>
 <body onload="onload()">
+    <fieldset>
     <div id="num"></div>
     <table>
         <tr>
             <input type="text" id="entry" >
+             <input type="button" value="reset" onclick="reset()">
         </tr>
        <tr>
-            <td><input type="button" id="1" value="1"></td>
-            <td><input type="button" id="2" value="2"></td>
-            <td><input type="button" id="3" value="3"></td>
+            <td><input type="button" id="1" value="1" onclick="setval('1')"></td>
+            <td><input type="button" id="2" value="2" onclick="setval('2')"></td>
+            <td><input type="button" id="3" value="3"onclick="setval('3')"></td>
         </tr>
         <tr>
-                <td><input type="button" id="4" value="5"></td>
-                <td><input type="button" id="5" value="6"></td>
-                <td><input type="button" id="6" value="7"></td>
+                <td><input type="button" id="4" value="4"onclick="setval('4')"></td>
+                <td><input type="button" id="5" value="5"onclick="setval('5')"></td>
+                <td><input type="button" id="6" value="6"onclick="setval('6')"></td>
             </tr>
             <tr>
-                    <td><input type="button" id="7" value="7"></td>
-                    <td><input type="button" id="8" value="8"></td>
-                    <td><input type="button" id="9" value="9"></td>
+                    <td><input type="button" id="7" value="7"onclick="setval('7')"></td>
+                    <td><input type="button" id="8" value="8"onclick="setval('8')"></td>
+                    <td><input type="button" id="9" value="9"onclick="setval('9')"></td>
                 </tr> <tr>
-                        <td><input type="button" id="+" value="+"></td>
-                        <td><input type="button" id="-" value="-"></td>
-                        <td><input type="button" id="*" value="*"></td>
+                        <td><input type="button" id="+" value="+"onclick="setval('+')"></td>
+                        <td><input type="button" id="0" value="0"onclick="setval('0')"></td>
+                        <td><input type="button" id="*" value="*"onclick="setval('*')"></td>
                     </tr>
                     <tr>
-                            <td><input type="button" id="/" value="/"></td>
-                            <td><input type="button" id="%" value="%"></td>
-                            <td><input type="button" id="=" value="="></td>
+                            <td><input type="button" id="/" value="/"onclick="setval('/')"></td>
+                            <td><input type="button" id="-" value="-"onclick="setval('-')"></td>
+                            <td><input type="button" id="=" value="="onclick="setval('=')"></td>
                         </tr>
-    </table>
+                    </table>
+    </fieldset>
     </body>
 </html>
