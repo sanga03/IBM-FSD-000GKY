@@ -9,9 +9,7 @@ class trainer{
 
     }
 
-    addTrainer(){
-            
-    }
+
     addOne(){
         console.log("hey");
     }
@@ -97,12 +95,39 @@ class section{
 
 let all_trainers=[]
 let sect ;
+let tmpsect;
+let asect,bsect;
+function onsett(){
+    asect= new section("A");
+    bsect=new section("B");
+}
 const classSelect=()=>{
  
     let select = document.getElementById("select");
     let selectVal=select.options[select.selectedIndex].value;
-    sect= new section(selectVal);
+    // if(selectVal=='A')
+    //     sect=asect;
+    //     else 
+    //     sect = bsect;
+    
+    try {
+        if(selectVal=='B'&&sect.name=='A')
+            tmpsect=sect;
+    } catch (error) {
+        console.log(error)
+        sect= new section(selectVal);
+    }
+    try {
+        if(selectVal=='A'&&sect.name=='B')
+            tmpsect=sect;
+    } catch (error) {
+        console.log(error)
+        sect= new section(selectVal);
+    }
+    
+    
     console.log(selectVal);
+    // sect.displayTable();
     let tableDisp=
     `<fieldset id="class-field">
     <legend>class ${selectVal}</legend>
@@ -115,10 +140,25 @@ document.getElementById("classes").innerHTML=tableDisp;
 sect.displayTable();
 
 }
-function onload() {
-  
+const disptr=()=>{
+    let tz=''
+    all_trainers.forEach((tt)=>{
+        tz+=`<tr> <td>${tt.name}</td>
+        <td>${tt.skills}</td>
+        <td>${tt.slots}</td>
+        </tr>
+        `
+    })
+    tt=`<fieldset>
+                <legend>all Trainer</legend><table>
+                <tr><th>name</th><th>skills</th><th>slots</th>
+                    ${tz}
+                </table>
+                </fieldset>
+               
+                `
+    document.getElementById("displaytr").innerHTML=tt;
 }
-
 const displaytrainer=()=>{
     let trainField=`<fieldset>
                 <legend>Trainer</legend>
@@ -190,6 +230,11 @@ updateSlot=(slot,subj)=>{
     let select = document.getElementById("trselect");
     let selectVal=select.options[select.selectedIndex].value;
     sect.setTrainer(subj,slot,selectVal);
+    all_trainers.forEach((te)=>{
+        if(te.name==selectVal){
+            te.slots.push(slot);
+        }
+    })
     sect.displayTable();
 
 }
@@ -209,6 +254,7 @@ getTrainer=(slot,subject)=>{
                             slot_aval = false;
                          }
                     })
+                    
             }
         })
         if(slot_aval&&train_aval){
@@ -228,9 +274,19 @@ const addtr=()=>{
                 skills.push(sub);
            }
         })
-        let name = document.getElementById("tname").value; 
+        let name = document.getElementById("tname").value;
+        let flag = true;
+        all_trainers.forEach((tn)=>{
+            if(tn.name == name){
+                tn.skills=skills;
+                flag = false;
+
+            }
+        }) 
+        if(flag){
         let newtrainer = new trainer(name,skills);
-        newtrainer.addTrainer();
         console.log(newtrainer.name,newtrainer.skills); 
         all_trainers.push(newtrainer);
+        }
+        
     }
