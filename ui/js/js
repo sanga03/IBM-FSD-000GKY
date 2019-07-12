@@ -80,3 +80,61 @@ reduceRight() => from right to left
 
 accumalotors by organisation
 
+classes and object:
+  const class cannot be assigned to other object 
+
+  seal(object) seals the object from updation
+
+  obj = Object.create({},{});
+  obj = Object.assign(old_obj);
+
+  clousure()
+   recursive function
+
+   error handling
+   class customError extends error{
+    super("message");
+   }
+
+   async function function_name(argument) {
+     // body...
+     await
+   }
+
+
+
+   HTTP:
+          {request , request headers}, {response,response headers}
+
+    GET
+    POST
+    PUT
+    DELETE
+    PATCH
+    OPTIONS
+
+
+
+    get: (size and lenght limitations)
+      url -- query string{ id, name,}
+              path parameters (fb.com/id/name/....)
+
+    POST: (query & path)
+
+(API)web services standard:
+    SOAP (simple object Acceess protocol)
+          WSDL (web services discriptor language){XML discriptor} drawback only XML
+          unnessary overhead (extra data download)
+    REST (representaional state transfer)
+          follows HTTP protocol (not strongly typed)can have json , xml...
+
+          fetch(_url,{
+            method:'GET'
+          }).then((res)=>{
+            const data = await res.json();
+            callback()
+            console.log(res)
+          }).catch();
+
+          promise: 
+

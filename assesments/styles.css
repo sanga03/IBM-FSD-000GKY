@@ -1,0 +1,25 @@
+input{
+
+border-radius: 5px;
+color: brown;
+background: white;
+}
+input[type="checkbox"]{
+    display: inline;
+}
+select{
+    
+    border-radius: 5px;
+    color: rgb(102, 18, 18);
+    size: 15px;
+}
+fieldset{
+    float:right;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+#classes{
+    float:left;
+    margin-top: 10px;
+    padding-top: 10px;
+}
