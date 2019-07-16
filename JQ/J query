@@ -1,0 +1,79 @@
+J query 
+
+ used by :
+ 		download
+ 		CDN content deleviry network
+ 				google API
+ 				microsoft 
+
+
+ entry point 
+ 	$ / JQuery
+
+ 	document --- starting func -- read()(onlpad()) every time refreshed 
+
+ 			$(document).ready(function(){
+
+ 			}) 
+
+ 	all funtion rely on callback 
+
+ 	minified  -- reduce the size and compressed in one single line
+
+
+ 	on - dynamic created elemets
+
+
+ 	toggle
+
+ 	  ready
+ 	  fair 
+ 	  hide
+ 	  
+validate
+
+
+asyncrounus js and xmak -AJAX
+	 for both post and get method
+
+Jquery UI
+
+	botton
+	theme
+	menu
+	select,checkbox
+	tabs
+	tooltip
+	draggable
+	dialog
+	droppable
+	daate picker
+	sortable
+	
+traversal 
+(.class or #id)
+  $(.class).each((index,element)=>{
+
+  		$(element).css("---","----");
+  })
+
+  $(.class).sibilings().each(()=>{})
+
+  $(.class).parents().each(()=>{})// all
+  $(.class).parent() // only immediate
+
+  Next neigbour
+  $(.class).next()
+  $(.class).nextAll().each(()=>{})
+
+  prev neigbour
+  $(.class).prev()
+  $(.class).prevAll().each(()=>{})
+
+  not
+    $(.class).not('#id').each(()=>{})
+
+$(.class).first()
+.last()
+
+find  keewkeken k fd krjv fkj kfj vfdj kdfj vfdkj fdkj     dkfjkfjkfj kjfkj fkjf  nfd

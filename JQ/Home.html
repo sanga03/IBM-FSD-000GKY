@@ -1,0 +1,65 @@
+<html>
+    <head>
+            <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js" type="text/javascript"></script>        
+            <script src="ui_validate_home.js"></script>
+            <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+            <!--<link rel="stylesheet" href="jquery-ui-theme.css" />-->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" integrity="sha256-p6xU9YulB7E2Ic62/PX+h59ayb3PBJ0WFTEQxq0EjHw=" crossorigin="anonymous" />
+            <script>
+                 
+            </script>
+            
+            <style>
+                    .ui-menu { width: 150px; }
+                    input{
+                        display: block;
+                        padding: 5px;
+                    }
+            </style>
+    </head>
+    <body>
+            <ul id="top-menu">
+                <li><div>Home</div></li>
+                <li><div>About US</div></li>
+                <li><div>Contact Us</div>
+                    <ul><div>email</div></ul>
+                    <ul><div>phone</div></ul>
+                </li>
+                <!-- <li class="ui-state-disabled"><div>Specials (n/a)</div></li> -->
+            </ul>
+            
+            <div id='tabs'>
+                <ul>
+                    <li><a href="#login">Login</a> </li>
+                    <li><a href="#Register">Register</a> </li>
+                    
+                </ul>
+                <div id="login">
+                    <form id="login-form">
+                    <input type="text" name="email_log"id="email_log" placeholder="Enter Email">
+                    <input type="password"name="pass" id="pass" >
+                    <input type="submit" id="lsubmit" onclick="Log()" >
+                    </form>
+                </div>
+
+                <div id="Register">
+                    <form id="reg-form">
+                        <input type="text" name="name" id="name" placeholder="Enter Name">
+                        <input type="text" name="email_reg" id="email_reg" placeholder="Enter Email">
+                        <input type="number" name="phone" id="phone" placeholder="Enter Phone No">
+                        <input type="password" name="pass_reg" id="pass_reg" >
+                        <input type="text" name="repass_reg"  id="repass_reg">
+                        <input type="submit" id="rsubmit" >
+                    </form>
+                </div>
+            </div>
+    </body>
+
+</html>

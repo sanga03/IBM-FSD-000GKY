@@ -1,0 +1,73 @@
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+
+    $(document).ready(()=>{
+      
+
+    
+
+        // $('input').css({'background':'green'});
+    $('#login').click(()=>{
+        // $('#login_reg').fadeIn(200);
+        console.log("login clicked")
+        $('#login_reg').html(` <form id="frm1">
+            <input type="text" name="email" placeholder="email">
+            <input type="text" name ="pass" placeholder="password">
+            <input type="submit" id="btnlogin1" value="submit">
+            </form>`)
+        $('#btnlogin1').click(()=>{
+    $.validator.addMethod('passValidator',(val)=>{
+        let reg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+        console.log(reg.test(val));
+        return reg.test(val);
+    });
+    $.validator.addMethod('emailValidator',(val)=>{
+        let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        return reg.test(val);
+    });  
+        $('#frm1').validate({
+        rules:{
+            pass:{  required:true
+                ,passValidator:true
+              
+            },
+            email:{
+                required:true
+                ,emailValidator:true
+            }
+        }
+    }) 
+        });
+
+    })
+    $('#register').click(()=>{
+        
+        $('#login_reg').fadeOut(2000);
+        $('#login_reg').fadeIn(200);
+        console.log("login clicked")
+            $('#login_reg').html(`
+            <input type="text" placeholder="name">
+            <input type="email" placeholder="email">
+            <input type="tel" placeholder="enter phone no">  
+            <input type="pass" placeholder="password"> 
+            <input type="button" id="rbtn" value="submit">
+            `)
+        })
+    });
+    </script>
+</head>
+
+<body>
+    <input type="button" id="login" value="login">
+    <input type="button" id="register" value="register">
+    <div id='login_reg'>
+       
+    </div>
+
+</body>
