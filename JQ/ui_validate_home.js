@@ -2,10 +2,10 @@ let flag=false;
 
 $(document).ready(()=>{
     flag=false;
-        // $('#top-menu').menu({
-        //     menu:'collapse'
-        // });
-        // $('#tabs').tabs()
+        $('#top-menu').menu({
+            menu:'collapse'
+        });
+        $('#tabs').tabs()
 
     $.validator.addMethod('emailValidator',(val)=>{
          let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

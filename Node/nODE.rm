@@ -1,0 +1,17 @@
+nODE
+
+	asyncrounous
+	event loop / queue (stores multiple request)
+	but only one thread processor
+	multiple worker thread
+
+
+module.exports={
+	class,
+	function
+}
+
+l = requires('./jsfile')
+
+eventdriven
+
