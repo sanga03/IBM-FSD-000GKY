@@ -37,6 +37,18 @@ function add_all_products_once(){
 function return_products(){
     return all_products;
 }
+
+update_products=(prod_obj)=>{
+    console.log(prod_obj);
+   for(let i=0;i<all_products.length;i++){
+       if(JSON.parse(all_products[i]).id==prod_obj.id){
+           prod_obj.qty = JSON.parse(all_products[i]).qty-prod_obj.qty;
+           all_products[i] = JSON.stringify(prod_obj)
+       }
+   }
+   return all_products;
+}
+
 function serach_detail(id){
     // console.log(id);
     // console.log(all_products)
@@ -51,5 +63,6 @@ module.exports={
     add_all_products_once,
     all_products,
     return_products,
-    serach_detail
+    serach_detail,
+    update_products
 }
