@@ -21,10 +21,31 @@
   font-size: 20px;
   background-color:#f1efdb;
   }
+  .badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px; 
+}
   </style>
     </head>
     <body onload="onloadz()" >
-        <input type="button" value="goto cart" id="cart" > 
+      <input type="image" id="cart" src="https://cdn4.iconfinder.com/data/icons/shopping-21/64/shopping-01-512.png" width="50" height="50">
+      <span class='badge badge-warning' id='lblCartCount'> 0 </span>
         <div id="product-list"></div>
     </body>
 </html>

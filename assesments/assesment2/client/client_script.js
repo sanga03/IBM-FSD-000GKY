@@ -2,6 +2,7 @@
 
     item_id=[]
     onloadz=()=>{
+        
         url = "http://localhost:8800/products/all"
         products_all = []
         data='<tr><th>id</th><th>name</th><th>image</th><th>qty</th><th>category</th><th>price</th>'
@@ -26,6 +27,14 @@
             cart_url = "http://localhost:8800/products/tocart"
             item_id.forEach((id)=>{
                 $(`#btn${id}`).click(()=>{
+
+                    cart_get =  "http://localhost:8800/cart/getcart"
+                    fetch(cart_get).then(resp=>resp.json()).then(resp=>{
+                       console.log(resp.datas.length);
+                       $('#lblCartCount').html(resp.datas.length);
+                })
+                    
+
                     find_url = `http://localhost:8800/products/search/${id}`
                     fetch(find_url).then(res=>res.json()).then(res=>{
                        
@@ -41,6 +50,9 @@
                         }).then(resp=>resp.json()).then((resp)=>{
                             console.log('success');
                         $('#cart').click(()=>{
+
+                       
+                            console.log('sd')
                             // console.log('clicked')
                             document.location='cart.html';
                         })
