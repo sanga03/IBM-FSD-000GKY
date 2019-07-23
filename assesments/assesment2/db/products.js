@@ -32,7 +32,7 @@ static_products=[{
     price:"1920.0",
     src:"https://img.tatacliq.com/images/i3/1348Wx2000H/MP000000001696055_1348Wx2000H_20180519050934.jpeg",
      qty:"10",
-    category:"earphones"
+    category:"earphone"
 },
 {id:6,
     name:"Panasonic ER-207-WK-44B ",

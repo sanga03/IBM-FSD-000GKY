@@ -2,17 +2,13 @@
 
     item_id=[]
     onloadz=()=>{
-        console.log('here in onload')
         url = "http://localhost:8800/products/all"
         products_all = []
-        data=''
+        data='<tr><th>id</th><th>name</th><th>image</th><th>qty</th><th>category</th><th>price</th>'
         fetch(url).then(res=>res.json()).then(products=>{
             products.datas.forEach(element => {
-                
                 ez=JSON.parse(element);
-                console.log(element);
                 products_all.push(ez)
-                console.log(ez.name)
                 item_id.push(ez.id)
                 data += `<tr>
                 <td>${ez.id}</td>
@@ -30,13 +26,11 @@
             cart_url = "http://localhost:8800/products/tocart"
             item_id.forEach((id)=>{
                 $(`#btn${id}`).click(()=>{
-
                     find_url = `http://localhost:8800/products/search/${id}`
                     fetch(find_url).then(res=>res.json()).then(res=>{
                        
                         item =JSON.parse(res.mes);
                         item.qty = 1;
-                        console.log(item);
                         fetch(cart_url,
                             { headers: {
                             'Accept': 'application/json',
@@ -46,8 +40,6 @@
                             body:JSON.stringify(item)
                         }).then(resp=>resp.json()).then((resp)=>{
                             console.log('success');
-                            console.log(resp);
-
                         $('#cart').click(()=>{
                             // console.log('clicked')
                             document.location='cart.html';
@@ -55,20 +47,12 @@
 
                         })
         
-                    })
-
-                   
+                    })             
                     // console.log(`btn${id}`);
 
                 })
             })
-
-
-
         }) 
-
-
-    
     }
 
 
