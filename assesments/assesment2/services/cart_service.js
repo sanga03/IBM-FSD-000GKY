@@ -85,7 +85,9 @@ class cart_class{
             <br>
             total price:${total_price}
             `
+
             emailz.email_send(to_email,html_body);
+
          
             
     }
