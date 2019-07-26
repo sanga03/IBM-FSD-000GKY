@@ -1,6 +1,6 @@
 express = require('express')
 parser = require('body-parser')
-validator=require('./services/token_service').validator
+validator=require('./services/validate_service').validator
 login_service = require('./api/login_api').l_router
 
 server = express()
@@ -21,7 +21,12 @@ server.get('/unauthorize',(rq,rs)=>{
 
 
 server.use('/logins',(rq,res,next)=>{
-    validator(rq,res,next);
+   returned_token= validator(rq,res,next);
+   console.log(returned_token);
+   
+//    res.status(200).json({
+//        token: "returned_token"
+//    })
 })
 
 server.use('/logins',login_service)
