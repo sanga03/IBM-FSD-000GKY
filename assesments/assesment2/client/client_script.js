@@ -21,7 +21,7 @@
                 <td><input type="button" value="add to cart" id="btn${ez.id}"></td>
                 </tr>`
             }); 
-            table = `<table>
+            table = `<table  class="table table-borderless">
             ${data}    </table>`
             document.getElementById('product-list').innerHTML=table;
             cart_url = "http://localhost:8800/products/tocart"

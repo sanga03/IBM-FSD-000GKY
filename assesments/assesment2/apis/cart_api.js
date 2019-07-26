@@ -13,7 +13,6 @@ server.get('/getcart',(rq,resp)=>{
         datas:data
     })
 })
-
 server.get('/updatecart/:id/:sign',(req,resp)=>{
     id = parseInt(req.params.id);
     sign = req.params.sign;

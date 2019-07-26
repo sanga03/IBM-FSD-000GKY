@@ -2,7 +2,7 @@
 ##		1)bower -- nodejs			converts to static
 		  grunt 
 
-##		2) Downloa
+##		2) Download
 		   CDN  -- jquery
 		   		   popper
 		   		   bootstrap
