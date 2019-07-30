@@ -9,7 +9,7 @@ onloadz=()=>{
         html_content+=`<tr>`
         for (let index = 0; index < 3; index++) {
             html_content+=`<td>
-                <input type="button" id="${i}${index}" value="">
+                <input type="button" id="${i}${index}" value="" class="btn btn-outline-dark btn-lg">
             </td>`
             buttons.push(`${i}${index}`)
         }
@@ -20,7 +20,7 @@ onloadz=()=>{
     ${html_content}
     </table>
 
-    <input type="button" id="reset" value="reset">
+    <input type="button" id="reset" class="btn btn-outline-danger" value="reset">
     `
       document.getElementById('tictac').innerHTML=content;
      get_url='http://localhost:8899/api/tictac/getstatus'
@@ -132,6 +132,7 @@ onloadz=()=>{
             reset_url="http://localhost:8899/api/tictac/reset";
             fetch(reset_url).then(res=>res.json()).then(res=>{
                 console.log(res)
+                location.reload()
             })
         })
 
