@@ -4,8 +4,8 @@ product_serv = require('../services/product.service').ProductService
 product_service = new product_serv()
 
 router.post('/add',(rq,res)=>{
-    product = rq.body.product;
-    token=rq.body.token;
+    product = rq.body;
+    token=rq.headers.token;
     valid= verifyToken(token);
     type = valid.type;
     // console.log(type)
