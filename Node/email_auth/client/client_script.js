@@ -1,5 +1,4 @@
 onloadz=()=>{
-
     $('#btnSubmit').click(()=>{
         name = $('#name').val()
         phone = $('#phone').val()
@@ -47,8 +46,8 @@ onloadz=()=>{
                 }).then(res=>res.json()).then(res=>{
                     if(res.status==1){
                         alert('login Success')
-                        $('#pass').html(' <input type="text" class="form-control"id="pass_id" placeholder="otp" value=""/>')
-                        $('#repass').html(' <input type="text" class="form-control"id="repass_id" placeholder="otp" value=""/>')
+                        $('#pass').html(' <input type="text" class="form-control"id="pass_id" placeholder="password" value=""/>')
+                        $('#repass').html(' <input type="text" class="form-control"id="repass_id" placeholder="re password" value=""/>')
                         $('#pass_btn').html(' <input type="button" class="form-control btn" id="pass_click"  value="move on"/>')
                         $('#pass_click').click(()=>{
                             // alert(2)

@@ -8,7 +8,6 @@ router.get('/status',(rq,rs)=>{
         message:'Hit success'
     })
 })
-
 router.post('/send',(rq,rs)=>{
     console.log(rq.body)
     email = rq.body.email;
