@@ -11,7 +11,9 @@ class Email{
         this.mailer = mailer.createTransport(this.smtpSetup);
     }
 
-    send_email(to,body){
+    send_email(to,body,callback){
+       let flag =0;
+        console.log(to)
         this.mailer.sendMail({
             from:this.smtpSetup.auth.user,
             to:to,
@@ -20,12 +22,13 @@ class Email{
         },(err,resp)=>{
             if(err){
                 console.log(err);
-                return 0;
+               callback(0);
             }else{
                 console.log('Email Sent');
-                return 1;
+                callback(1);
             }
         })
+    //  return flag;
     }
 }
 

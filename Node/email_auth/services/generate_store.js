@@ -7,7 +7,7 @@ gen_store=(name,email,phone,callback )=>{
     var now = Date.now();
     next = now + 6000000;
     otp = otp_genarate();
-    email={
+    email_1={
         name:name,
         email:email,
         phone:phone,
@@ -15,20 +15,23 @@ gen_store=(name,email,phone,callback )=>{
         ttl:next
     }
     html_body=`please check the otp: <b>${otp}<b>`
-   sent= email_obj.send_email(email,html_body);
-   if(sent == 1){
-    mongodb.connect(mongo_const.url,(err,conn)=>{
-        conn.db(mongo_const.db).collection(mongo_const.collection).insertOne({email_obj},(err,res)=>{
-            if(!err){
-                console.log("Insertec");
-                callback(err,res)
-            }
+
+   sent= email_obj.send_email(email,html_body,(resp)=>{
+       if(resp==1){
+        console.log(sent);
+        mongodb.connect(mongo_const.url,(err,conn)=>{
+            conn.db(mongo_const.db).collection(mongo_const.collections).insertOne({email_1},(err,res)=>{
+                if(!err){
+                    console.log("Insertec");
+                    callback(err,res)
+                }
+            })
         })
-    })
-}else{
-    console.log("email not sent")
-    callback("email not sent")
-}
+       }else{
+        console.log("email not sent")
+        callback("email not sent")
+       }
+   });
 
 }
 
