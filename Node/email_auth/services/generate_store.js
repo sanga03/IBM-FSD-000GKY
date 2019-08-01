@@ -49,6 +49,44 @@ otp_genarate=()=>{
     return OTP;
 }
 
+
+check_otp=(name,email,otp,callback)=>{
+    console.log(name,email,otp)
+    mongodb.connect(mongo_const.url,(err,conn)=>{
+        conn.db(mongo_const.db).collection(mongo_const.collections).find({name:name,email:email,otp:otp}).toArray((err,res)=>{
+          
+           ttl =res[0].ttl;
+           console.log(ttl)
+           console.log('ress======',res[0])
+           now_time=  Date.now()
+           console.log("now",now_time)
+           
+            if(ttl > now_time){
+                console.log("good to go")
+                callback(1);
+            }else{
+                console.log("sorry otp expired")
+                callback(0);
+            }
+        
+        });
+    })
+}
+
+
+update_db=(name,otp,pass,callback)=>{
+    mongodb.connect(mongo_const.url,(err,conn)=>{
+        conn.db(mongo_const.db).collection(mongo_const.collections).updateOne({name:name,otp:otp},{ $set: {pass: pass, active: "yes" }},(err,res)=>{
+            if(!err){
+                callback(1)
+            }else
+            callback(0)
+        })
+})
+}
+
 module.exports={
-    gen_store
+    gen_store,
+    check_otp,
+    update_db
 }
