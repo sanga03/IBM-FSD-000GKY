@@ -10,15 +10,15 @@ router.get('/status',(rq,rs)=>{
 })
 
 router.post('/send',(rq,rs)=>{
+    console.log(rq.body)
     email = rq.body.email;
     name = rq.body.name;
     phone = rq.body.phone;
-
+    console.log(email)
     gen_store(name,email,phone,(err,resp)=>{
         if(!err){
             rs.status(200).json({
-                message:'inserted Success',
-                res:resp
+                message:'inserted Success'
             })
         }else{
                 if(err=="email not sent"){

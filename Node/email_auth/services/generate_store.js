@@ -5,7 +5,7 @@ email_class =require('../services/email_service').Email
 gen_store=(name,email,phone,callback )=>{
     email_obj= new email_class()
     var now = Date.now();
-    next = now + 6000000;
+    next = now + 600000;
     otp = otp_genarate();
     email_1={
         name:name,
@@ -14,13 +14,18 @@ gen_store=(name,email,phone,callback )=>{
         otp:otp,
         ttl:next
     }
-    html_body=`please check the otp: <b>${otp}<b>`
+    dd=new Date(next).toString()
+    html_body=`please check the otp: <b>${otp}</b> which expires by <b><i>${dd}</i></b>`
 
    sent= email_obj.send_email(email,html_body,(resp)=>{
        if(resp==1){
         console.log(sent);
         mongodb.connect(mongo_const.url,(err,conn)=>{
-            conn.db(mongo_const.db).collection(mongo_const.collections).insertOne({email_1},(err,res)=>{
+            conn.db(mongo_const.db).collection(mongo_const.collections).insertOne({name:name,
+                email:email,
+                phone:phone,
+                otp:otp,
+                ttl:next},(err,res)=>{
                 if(!err){
                     console.log("Insertec");
                     callback(err,res)
