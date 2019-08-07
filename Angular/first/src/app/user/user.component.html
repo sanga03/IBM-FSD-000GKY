@@ -1,16 +1,29 @@
 <!-- <p>user works!</p> -->
-<table>
+
     
-    <th>{{th.name}}</th><th>{{th.no}}</th>
+    <!-- <th>{{th.name}}</th><th>{{th.no}}</th>
     <div *ngFor="let u of data">
-       <td>{{u.name}}</td> <td>{{u.no }}</td>
+       <td>{{u.name}}</td> <td>{{u.no | power :2}}</td>
     </div>
     <!-- <tr>
         {{
             data.foreach((dat)=>{
             dat.name
         })}}
-    </tr> -->
+    </tr> 
 
 </table>
 <b>{{message}}</b>
+
+<b>{{getData}}</b>
+<input type="button" (click)="onclickz()" value="submit"> -->
+
+<table style="border: 1px solid black" style="width:40%">
+    <tr>
+        TOTAL users:{{active_s.total}} (Active:{{active_s.active}},inactive:{{active_s.inactive}}) 
+    </tr>
+    <th>ID</th><th>Name</th><th>Age</th><th><input type="button" (click)='addUser()' value="ADD"></th>
+    <tr *ngFor="let u of data">
+        <td>{{u.id}}</td><td>{{u.name}}</td><td>{{u.age}}</td><td><input type="button" (click)='delUser(u.id)' value="delete"></td> 
+    </tr>
+</table>

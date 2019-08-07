@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first';
+  strobj:string="Na na";
+  fromUserString:any="asd";
+  getFromuser($event){
+    this.fromUserString=$event;
+  }
+
 }
