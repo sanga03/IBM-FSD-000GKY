@@ -74,3 +74,6 @@ if one class is compiles where another class is called it is aitomatically calle
 
  }
 ```
+
+## orphan object
+` new MyDate().creteDate(8,10,2013)`
