@@ -1,5 +1,6 @@
-# jvm 
+# JAVA -- FSD 
 
+## jvm 
 instruction set
 register set
 class file format
@@ -84,27 +85,26 @@ method hooking :- calling impicit cunstructor
 [constructor chaining](./JAVA_12-08/src/com/example/MyDate.java)
 ` this(10)`
 
-# [Inheritance](./JAVA_12-08/src/com/employee/)
-	concept of child class(sub class) inheriting from parent class
+## [Inheritance](./JAVA_12-08/src/com/employee/)
+concept of child class(sub class) inheriting from parent class
 	```
 		public class Person(){
 			protected String name;
-
 		}
-
 		public class Man extends Person(){
 			private String mustache;
-			
-		}
+	}
 	```
-	Dynamic Method Despaching
+Dynamic Method Despaching
 	```
 	Person p=null;
 	p=new Student()
 	p=new Employee() #can only be accesible which are common on parent and child class (overridden)
+	p.getClass().getName() // gives the name of class package.ClassName
 	```
 	@Override
-		same method name as parent but different functionality with the child
+		same method name as parent but different functionality with the child    
+	constructors cannot be overridden but can be called using super
 
 ## must implement
 	constructor
@@ -151,3 +151,6 @@ static block
 		// initialization of insatance var
 	}
 ```
+
+blank final variable 
+	` private static final double TAX;`
