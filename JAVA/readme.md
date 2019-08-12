@@ -41,6 +41,7 @@ fatal error reporting
 
 jvisualvm
 jconsole -- visulaise the jvm
+javap java.lang.String (gives the methods of class)
 
 
 # Garbage collection
@@ -152,5 +153,10 @@ static block
 	}
 ```
 
+## final
 blank final variable 
 	` private static final double TAX;`
+final varialbes are denoted in CAPS_AND_UNDERSCORE
+final var val cannot be changed
+final methods cannot be override
+final class cannot be inhereted
