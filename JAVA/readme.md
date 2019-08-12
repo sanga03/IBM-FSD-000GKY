@@ -37,11 +37,11 @@ fatal error reporting
 	-> Hardware
 
 
-## javap -c class name gives the bytecode
-
-jvisualvm
-jconsole -- visulaise the jvm
-javap java.lang.String (gives the methods of class)
+## java commands
+	javap -c class name gives the bytecode
+	jvisualvm
+	jconsole -- visulaise the jvm
+	javap java.lang.String (gives the methods of class)
 
 
 # Garbage collection
@@ -154,9 +154,21 @@ static block
 ```
 
 ## final
-blank final variable 
-	` private static final double TAX;`
-final varialbes are denoted in CAPS_AND_UNDERSCORE
-final var val cannot be changed
-final methods cannot be override
-final class cannot be inhereted
+	blank final variable 
+		` private static final double TAX;`
+	final varialbes are denoted in CAPS_AND_UNDERSCORE
+	final var val cannot be changed
+	final methods cannot be override
+	final class cannot be inhereted
+
+## Array
+```
+  Product[] p = new Product[5];
+  //or Product p[]={}
+  p[0]=new Book();
+  p[0]=new TV();
+  p[0]=new Mp3();
+  for(Product pro:p){
+  	Sys.out(p.getClass().getName())
+  }
+  ```
