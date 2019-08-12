@@ -47,3 +47,30 @@ jconsole -- visulaise the jvm
 	can very dreamatically across jvm implemantation
 
 if one class is compiles where another class is called it is aitomatically called
+
+# OOP
+
+# Abstraction:-
+	hiding the data (only methods and instruction to access)
+	function: write an algorithm once to used in many sitautoins
+	object : group related set of attributes and behaviors into class
+	framework and APIs:
+	class is blueprint for object:
+
+# OOP KEY FEATURES
+
+## Encapsualtion
+	protacting data
+## Inheritance
+	multiple inheritance is not supported virual method invocation (interfaces )
+## Polyomrphism
+	same function name but different functonality  based on arguments
+
+```
+ <modifier>* class <class name>{
+ 	<attribute_declaration>*
+ 	<cunstructor_declaration>*
+ 	<method_declaration>*
+
+ }
+```
