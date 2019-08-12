@@ -104,3 +104,32 @@ method hooking :- calling impicit cunstructor
 	```
 	@Override
 		same method name as parent but different functionality with the child
+
+## must implement
+	constructor
+	parametarised constructor
+	setter and getters
+
+## [java.lang.object](./JAVA_12-08/src/com/account/Account.java)
+	super class of all classes
+	methods:	
+			toString:-
+			   public String toString(){
+			   	return "custum";
+			   }
+			equals:-
+				public boolean equals(Object obj){
+					Point p = (Point)obj;
+					if(this.x==p.x && this.y==p.y)
+					return true;
+					else return false;
+				}
+				p1.equals(p2)
+
+			hashCode:-
+					returns the same hash if contents are same
+					is called whenever equals method is called 
+
+			wait
+			notify
+			notifyAll

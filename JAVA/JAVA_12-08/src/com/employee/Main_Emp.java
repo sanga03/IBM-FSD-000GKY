@@ -10,6 +10,7 @@ public class Main_Emp {
 		System.out.println(emp.getDetails());
 		emp = new TempEmployee("sangamesh","FSD","Bangalore",30.7);
 		System.out.println(emp.getDetails());
+	
 	}
 
 }
