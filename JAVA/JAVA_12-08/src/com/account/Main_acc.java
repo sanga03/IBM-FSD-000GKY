@@ -6,6 +6,7 @@ public class Main_acc {
 		// TODO Auto-generated method stub
 		Account ac=new Account("sanga",23,"bang");
 		Account new_ac=new Account("sanga",23,"bang");
+		System.out.println(ac);
 		if(ac.equals(new_ac)) {
 			System.out.println("Accounts are same");
 		}else {

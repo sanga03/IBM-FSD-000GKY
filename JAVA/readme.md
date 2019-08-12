@@ -5,7 +5,8 @@ register set
 class file format
 
 ## memory
-	stack
+	stack  (local variables)
+	heap (instance variables)
 	garbage collection
 mermory area
 fatal error reporting
@@ -133,3 +134,20 @@ method hooking :- calling impicit cunstructor
 			wait
 			notify
 			notifyAll
+
+
+## static
+static block
+```	
+	static{
+
+		//static var initialization
+	}
+```
+## no -name block
+```
+	{
+		// acts as constructor
+		// initialization of insatance var
+	}
+```

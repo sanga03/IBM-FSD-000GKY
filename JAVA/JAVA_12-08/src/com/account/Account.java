@@ -60,7 +60,7 @@ public class Account {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Account Det: \n Name:"+name+"\nId:"+id+"\nLocation"+location;
+		return "Account Details: \nName:"+name+"\nId:"+id+"\nLocation:"+location+"\n";
 	}
 
 }
