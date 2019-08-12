@@ -83,7 +83,7 @@ method hooking :- calling impicit cunstructor
 [constructor chaining](./JAVA_12-08/src/com/example/MyDate.java)
 ` this(10)`
 
-# Inheritance
+# [Inheritance](./JAVA_12-08/src/com/employee/Employee.java)
 	concept of child class(sub class) inheriting from parent class
 	```
 		public class Person(){
