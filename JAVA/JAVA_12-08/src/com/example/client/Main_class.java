@@ -26,6 +26,9 @@ public class Main_class {
 		}
 		
 		System.out.println("Day:"+mdate.getDate()+"\tMonth:"+mdate.getMonth()+"\tYear"+mdate.getYear());
+	
+		System.out.println(new MyDate().getDetails());
+	
 	}
 
 }

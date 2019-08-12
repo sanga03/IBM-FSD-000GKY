@@ -77,3 +77,7 @@ if one class is compiles where another class is called it is aitomatically calle
 
 ## orphan object
 ` new MyDate().creteDate(8,10,2013)`
+
+method hooking :- calling impicit cunstructor
+constructor chaining (./JAVA_12-08/src/com/example/MyDate.java)
+` this(10)`

@@ -31,6 +31,25 @@ public class MyDate {
 		year=y;
 	}
 	
+	// constructor chaining 
+	public MyDate() {
+//		super();
+		this(1);
+	}
+public MyDate(int d) {
+	this(d,1);
+}
+public MyDate(int d, int m) {
+	this(d,m,2000);
+}
+
+	public MyDate(int day, int month, int year) {
+		super();
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+
 	public int getDate() {
 		return day;
 	}
