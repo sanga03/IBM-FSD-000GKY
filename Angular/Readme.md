@@ -38,3 +38,12 @@ divided:
 	oninit()	  ondestroy()
 
 	
+# basic commands
+
+ng new project_name
+
+ng g c new_compenent
+
+ng g s mew_service
+
+ng g 	

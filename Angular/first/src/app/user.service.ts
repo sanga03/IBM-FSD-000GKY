@@ -51,7 +51,7 @@ export class UserService {
     temp = this.users[i];
     this.users[i]=this.users[this.users.length-1]
     this.users[this.users.length-1]=temp;
-  }
+  } 
   addUser(){
     this.users.push({
       name:'maru',
