@@ -75,10 +75,32 @@ if one class is compiles where another class is called it is aitomatically calle
  }
 ```
 
-## orphan object
+## [orphan object](./JAVA_12-08/src/com/example/MyDate.java)
 ` new MyDate().creteDate(8,10,2013)`
 
 method hooking :- calling impicit cunstructor
 
 [constructor chaining](./JAVA_12-08/src/com/example/MyDate.java)
 ` this(10)`
+
+# Inheritance
+	concept of child class(sub class) inheriting from parent class
+	```
+		public class Person(){
+			protected String name;
+
+		}
+
+		public class Man extends Person(){
+			private String mustache;
+			
+		}
+	```
+	Dynamic Method Despaching
+	```
+	Person p=null;
+	p=new Student()
+	p=new Employee() #can only be accesible which are common on parent and child class (overridden)
+	```
+	@Override
+		same method name as parent but different functionality with the child
