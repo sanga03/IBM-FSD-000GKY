@@ -187,5 +187,5 @@ static block
 	by deafult all methods are abstract
 	run time actual onject instance is associated with the interface type
 	supports multiple inheritance
-## [Singelton class](./JAVA_13_08/src/com/singelton/Main_singelton)
+## [Singelton class](./JAVA_13_08/src/com/singelton/Main_singleton.java)
 	only one object of class is accessable and used
