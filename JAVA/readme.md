@@ -172,3 +172,18 @@ static block
   	Sys.out(p.getClass().getName())
   }
   ```
+
+13-08-19
+## [Abstract class](./JAVA_13_08/src/com/abstrat)
+	Abstract methods:- 
+			only has the declaration not the implementation
+
+			public abstract void methodName();
+
+	is class which contains one or more abstract methods
+	if any (concrete class)class extends abstract class has to implement all abstract methods
+ 
+## [Interface](./JAVA_13_08/src/com/interfac)
+	by deafult all methods are abstract
+	run time actual onject instance is associated with the interface type
+	supports multiple inheritance
