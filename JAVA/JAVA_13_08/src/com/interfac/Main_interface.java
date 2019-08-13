@@ -9,7 +9,7 @@ public class Main_interface {
 		d.createLivingthing();
 		LivingThing l = new Dog();
 		l.walk();
-
+ 
 	}
 
 }
