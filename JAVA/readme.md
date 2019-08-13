@@ -161,8 +161,11 @@ static block
 	final methods cannot be override
 	final class cannot be inhereted
 
-## Array
-```
+## [Array](./JAVA_13_08/src/com/Array/Array_Builder.java)
+	 autoboxing :int to integer 
+	 private int arr[] // as good as Integer arr[] = new Integer[lenght]
+	 autounboxing:Integer to int
+ ```
   Product[] p = new Product[5];
   //or Product p[]={}
   p[0]=new Book();
@@ -172,6 +175,7 @@ static block
   	Sys.out(p.getClass().getName())
   }
   ```
+
 
 13-08-19
 ## [Abstract class](./JAVA_13_08/src/com/abstrat)

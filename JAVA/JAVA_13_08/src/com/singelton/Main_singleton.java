@@ -8,6 +8,8 @@ public class Main_singleton {
 		System.out.println(m==Messaging.getMessObj());
 		System.out.println(Messaging.getMessObj("Sanga"));
 		System.out.println(Messaging.getMessObj("Sanga")==m);
+		System.out.println(Messaging.getMessObj("Sanga").equals(m));
+//		System.out.println();
 	}
 
 }
