@@ -165,6 +165,10 @@ static block
 	 autoboxing :int to integer 
 	 private int arr[] // as good as Integer arr[] = new Integer[lenght]
 	 autounboxing:Integer to int
+	 int[m][n]
+	 if n is same --- 2d array
+	 if int[0][m]
+	 	int[1][n] then irregur / jagged array
  ```
   Product[] p = new Product[5];
   //or Product p[]={}
@@ -193,3 +197,14 @@ static block
 	supports multiple inheritance
 ## [Singelton class](./JAVA_13_08/src/com/singelton/Main_singleton.java)
 	only one object of class is accessable and used
+
+## variable arguments
+```	
+	public int add(int... var){
+		int sum=0;
+		for(int i:var){
+			sum+=i;
+		}
+		return sum;
+	}
+```

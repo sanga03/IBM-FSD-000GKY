@@ -12,8 +12,10 @@ public Array_Builder() {
 	stk = new Stack<Integer>();
 }
 public Array_Builder(int ln,int len) {
+	stk = new Stack<Integer>();
 	arr = new char[ln];
 	this.len =len;
+	
 
 }
 public char[] build(char ch) {
@@ -30,7 +32,7 @@ public int findElement(int[] arr,int item){
 	return (Arrays.binarySearch(arr, item));
 }
 public boolean pushItem(int item){
-	if(stk.size() < len){
+	if(stk.size() > len){
 		System.out.println("Over flow");
 		return false;
 	}
@@ -39,7 +41,7 @@ public boolean pushItem(int item){
 	return true;
 }
 public int popItem(){
-	if(stk.size()<1){
+	if(stk.size() < 1){
 		System.out.println("Under flow");
 		return -1;
 	}
