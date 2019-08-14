@@ -11,7 +11,7 @@ public class Main_Enum {
 			Cars c = new Cars();
 //			System.out.println(l);
 			int m = (int) Math.ceil(Math.random() * 5);
-			int n = (int) Math.floor(Math.random() * 10);
+			int n = (int) Math.floor(Math.random() * 10 );
 			c.createCars(l, Models[n]);
 			System.out.println(c.getCar());
 			

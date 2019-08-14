@@ -220,6 +220,22 @@ Serializale interface:
 	marker interface doesnt have any abstract methods
 	and tells garbage collection not to collect data 
 
-## [Enum]
+## [Enum](./Java-Code/src/code/D_14_08/Enum/Main_Enum.java)
 	An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
-![enum](./Java-Code/src/code/D_14_08/Enum/Main_Enum.java)
+
+## Collections
+	can store only objects (elements)
+	Collection:-spacific ordering
+	Set:-unordered collection ; no duplicates
+	List:- order collection ; duplicates allowed
+
+		 	Hash table 	Resizable Array 	` Tree 	    LL 				HT+LL
+	set 	HashSet			---		 		TreeSet						LinkedHashSet
+	List 					ArrayList						LinkedList			
+	Deque					ArrayDeque						LinkedList
+	Map 	 HashMap 							TreeMap						LinkedHashMap
+
+	these collections can store combination of any type of objects but by 
+	Using Genereric
+	Set<String> set = new HashSet()<String>
+	we make sure it only stores perticular type of Objects
