@@ -210,8 +210,12 @@ static block
 ```
 14-08-19
 
-## Exception
+## [Exception](./Java-Code/code/D_14_08/Exception.Exception_Main.java)
 	unexpected sitautation happens at runtime  
 	Exception Handeling:- handling the unexpected sitatuation
 
 ![alt image](http://www.artima.com/javaseminars/modules/Exceptions/images/BWThrowableFamily.gif)
+
+Serializale interface:
+	marker interface doesnt have any abstract methods
+	and tells garbage collection not to collect data 

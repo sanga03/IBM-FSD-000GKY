@@ -8,6 +8,7 @@ public static void main(String[] args) {
 	Model.Square sqr= md.new Square();
 	System.out.println(sqr.area());
 	
+	System.out.println(args[1]);
 	}
 
 }
