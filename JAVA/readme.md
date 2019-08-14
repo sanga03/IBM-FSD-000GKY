@@ -214,4 +214,4 @@ static block
 	unexpected sitautation happens at runtime  
 	Exception Handeling:- handling the unexpected sitatuation
 
-[alt image](http://www.artima.com/javaseminars/modules/Exceptions/images/BWThrowableFamily.gif)
+![alt image](http://www.artima.com/javaseminars/modules/Exceptions/images/BWThrowableFamily.gif)
