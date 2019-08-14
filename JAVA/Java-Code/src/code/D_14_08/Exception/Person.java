@@ -33,4 +33,24 @@ public void display() {
 	
 }
 
+
+	public boolean equalsPerson(Person p) throws PersonEqualsException {
+//		Person p =(Person) obj;
+//		System.out.println("name --- "+this.fname+" "+this.lname);
+//		System.out.println("p++ name --- "+p.fname+" "+p.lname);
+//		if(p.fname.contentEquals(this.fname)) {
+//			System.out.println("saaammmmee");
+//		}
+		if(p.fname.contentEquals(this.fname) && p.lname.contentEquals(this.lname)){
+			System.out.println("Name Found");
+		throw new PersonEqualsException();
+		}
+		else { 
+			
+			System.out.println("Name not Found");
+			return true;
+		}
+		
+		}
+
 }
