@@ -219,3 +219,7 @@ static block
 Serializale interface:
 	marker interface doesnt have any abstract methods
 	and tells garbage collection not to collect data 
+
+## [Enum]
+	An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+![enum](./Java-Code/src/code/D_14_08/Enum/Main_Enum.java)
