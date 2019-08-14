@@ -1,5 +1,5 @@
 # JAVA -- FSD 
-
+[12-08-19](./JAVA_12-08/src/com)
 ## jvm 
 instruction set
 register set
@@ -181,7 +181,7 @@ static block
   ```
 
 
-13-08-19
+[13-08-19](./JAVA_13_08/src/com)
 ## [Abstract class](./JAVA_13_08/src/com/abstrat)
 	Abstract methods:- 
 			only has the declaration not the implementation
@@ -208,3 +208,8 @@ static block
 		return sum;
 	}
 ```
+14-08-19
+
+## Exception
+	unexpected sitautation happens at runtime  
+	Exception Handeling:- handling the unexpected sitatuation
