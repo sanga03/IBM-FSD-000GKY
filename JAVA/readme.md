@@ -243,12 +243,12 @@ Serializale interface:
 ## [Set](./Java-Code/src/code/D_14_08/Set/SetCollection.java) 
 	Set doesn't hold duplicate values
 
-## [List](./Java-Code/src/code/D_19_08/Card/MainCard.java)
+## [List](./Java-Code/src/code/D_19_08/Card/MainCard.java)[Read](https://www.geeksforgeeks.org/list-interface-java-examples/)
+
 
 	List a = new ArrayList();
 	List b = new LinkedList();
 	List c = new Vector(); 
 	List d = new Stack(); 
-	[Read](https://www.geeksforgeeks.org/list-interface-java-examples/)
 
 ## [Vector](./Java-Code/src/code/D_19_08/List/Vectors.java)
