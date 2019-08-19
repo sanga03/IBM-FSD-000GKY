@@ -240,10 +240,12 @@ Serializale interface:
 	Set<String> set = new HashSet()<String>
 	we make sure it only stores perticular type of Objects
 
+
 ## [Set](./Java-Code/src/code/D_14_08/Set/SetCollection.java) 
 	Set doesn't hold duplicate values
 
-## [List](./Java-Code/src/code/D_19_08/Card/MainCard.java)[Read](https://www.geeksforgeeks.org/list-interface-java-examples/)
+[19/08/19](./Java-Code/src/code/D_19_08)
+## [List](./Java-Code/src/code/D_19_08/Card/MainCard.java)      [Read](https://www.geeksforgeeks.org/list-interface-java-examples/)
 
 	List a = new ArrayList();
 	List b = new LinkedList();
