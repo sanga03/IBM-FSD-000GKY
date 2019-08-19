@@ -261,7 +261,22 @@ Serializale interface:
 	its an api 
 	defines a set of java interfaces which are implemented by vendor sacific jdbc driver
 	majority - java.sql
+	datbase already comes with the driver but we have to set up driver for our application 
+
+## register jdbc to application
+	goto java project -> properties --> add java build path --> mysql/ other connector
+	then import those jdbc drivers 
+	incase of mysql -- > com.sql.cj.jdbc...
+
 	driverManager
 	DatabseMetadata
 
-	
+## [jdbc examples](./Java-Code/src/code/D_19_08/jdbc/jdbc_demo.java)
+	driver
+	connection
+	statements
+	st.executeQuery() return result set
+	prepared statement ( ? -> placeholders)
+	pst.setInt(1,value); (1 -- column )
+	pst.executeUpdate() returns count of rows updated
+	resultSet

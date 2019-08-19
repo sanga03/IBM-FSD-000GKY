@@ -17,11 +17,23 @@ public static void main(String[] args) throws SQLException {
 	
 	JdbcSingelton jdbcSingelton = JdbcSingelton.getJdbcSingelton();
 	Connection conn = (Connection) jdbcSingelton.getConnection();
+	
+	
 	PreparedStatement pst = (PreparedStatement) conn.prepareStatement("insert into eibm values(?,?,?)");
 	pst.setInt(1, 12);
 	pst.setString(2, "sangamesh");
 	pst.setString(3, "sangu4403!asd.com");
 	int count = pst.executeUpdate();
 	System.out.println(count+"rows updated");
+	
+	
+	pst = (PreparedStatement) conn.prepareStatement("update eibm set email=? where eid=12");
+	pst.setString(1, "sangu4403@gmail.com");
+	System.out.println(pst.executeUpdate());
+	
+	pst = (PreparedStatement) conn.prepareStatement("delete from eibm where eid=12");
+	System.out.println(pst.executeUpdate());
+	
+
 }
 }
