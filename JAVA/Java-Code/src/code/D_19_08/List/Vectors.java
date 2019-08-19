@@ -9,7 +9,6 @@ public class Vectors {
 	v.add("asdda");
 	}
 	
-	
 	public Enumeration<String> getVector(){
 	Enumeration<String> em= v.elements();
 	return em;
