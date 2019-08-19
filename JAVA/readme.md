@@ -256,3 +256,12 @@ Serializale interface:
 	interface which helps in ordering of collections 
 	have to override compareTo()
 	used on unordered collection(Set)
+
+# JDBC
+	its an api 
+	defines a set of java interfaces which are implemented by vendor sacific jdbc driver
+	majority - java.sql
+	driverManager
+	DatabseMetadata
+
+	
