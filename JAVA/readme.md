@@ -245,7 +245,6 @@ Serializale interface:
 
 ## [List](./Java-Code/src/code/D_19_08/Card/MainCard.java)[Read](https://www.geeksforgeeks.org/list-interface-java-examples/)
 
-
 	List a = new ArrayList();
 	List b = new LinkedList();
 	List c = new Vector(); 
