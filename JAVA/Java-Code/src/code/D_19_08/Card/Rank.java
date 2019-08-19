@@ -1,0 +1,5 @@
+package code.D_19_08.Card;
+
+public enum Rank {
+DUECE,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JOKER,QUEEN,KING,ACE
+}
