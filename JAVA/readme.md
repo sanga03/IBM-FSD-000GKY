@@ -312,4 +312,4 @@ Thread LifeCycle
 ![alt image](https://t1.daumcdn.net/cfile/tistory/2157A74C57F48D8B32)
 	
 	class can implement Runnable which has to override run method
-[example](./Java-Code/src/code/D_20_08/Thread/MainThread.java)
+#### [example](./Java-Code/src/code/D_20_08/Thread/MainThread.java)
