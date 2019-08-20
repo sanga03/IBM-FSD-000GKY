@@ -286,7 +286,9 @@ Serializale interface:
 ## [20/08/19](./Java-Code/src/code/D_20_08)
 	CRUD operations 
 	Crete,Read,Update and delete operations in mysql
-	example -- [employee services using mysql](./Java-Code/src/code/D_20_08/EmployeSql/MainEmp.java)
+
+example -- [employee services using mysql](./Java-Code/src/code/D_20_08/EmployeSql/MainEmp.java)
+
 ### Database Metadata
 	has all the details about connection and driverManager
 	DatabaseMetaData mdata = conn.getMetaData();
@@ -300,3 +302,10 @@ Serializale interface:
 	rMetaData.getColumnLabel(1)
 
 ## Thread
+	Threads are Virtual CPU
+	has three parts:
+		CPU
+		Code
+		Data
+Thread LifeCycle
+[!alt](https://www.tutorialspoint.com/java/images/Thread_Life_Cycle.jpg)
