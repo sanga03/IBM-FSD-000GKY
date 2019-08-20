@@ -308,4 +308,4 @@ example -- [employee services using mysql](./Java-Code/src/code/D_20_08/EmployeS
 		Code
 		Data
 Thread LifeCycle
-![alt image](https://www.tutorialspoint.com/java/images/Thread_Life_Cycle.jpg)
+![alt image](https://t1.daumcdn.net/cfile/tistory/2157A74C57F48D8B32)
