@@ -283,5 +283,20 @@ Serializale interface:
 	pst.executeUpdate() returns count of rows updated
 	resultSet
 
-[20/08/19](./Java-Code/src/code/D_20_08)
-[employee services using mysql](./Java-Code/src/code/D_20_08/EmployeSql/MainEmp.java)
+## [20/08/19](./Java-Code/src/code/D_20_08)
+	CRUD operations 
+	Crete,Read,Update and delete operations in mysql
+	example -- [employee services using mysql](./Java-Code/src/code/D_20_08/EmployeSql/MainEmp.java)
+### Database Metadata
+	has all the details about connection and driverManager
+	DatabaseMetaData mdata = conn.getMetaData();
+	mdata.getUrl()
+	mdata.getUserName()
+	mdata.getDriverName()
+	mdata.getMajorVersion()
+
+### ResultSetMetaData
+	rMetaData.getCoulmnCount
+	rMetaData.getColumnLabel(1)
+
+## Thread
