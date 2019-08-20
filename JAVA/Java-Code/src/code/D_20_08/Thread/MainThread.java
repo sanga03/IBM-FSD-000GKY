@@ -8,6 +8,12 @@ public class MainThread implements Runnable {
 		Thread t1=new Thread(mt);
 		Thread t2=new Thread(mt);
 		t1.start();
+		try {
+			t1.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		t2.start();
 	}
 
@@ -17,7 +23,7 @@ public class MainThread implements Runnable {
 			System.out.printf("\n-->>%d",i);
 			if(i%7==0)
 				try {
-					Thread.sleep(1000);
+					Thread.sleep(1000000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

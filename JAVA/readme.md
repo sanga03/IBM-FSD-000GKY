@@ -313,3 +313,12 @@ Thread LifeCycle
 	
 	class can implement Runnable which has to override run method
 #### [example](./Java-Code/src/code/D_20_08/Thread/MainThread.java)
+###  Common Thread functions
+	Thread sleep --  forcefull transition to block state
+	Thread yeild -- ready to go to wait state
+	Thread isAlive -- true if alive (runnin or waiting state)
+	Thread join -- brings back the thread from waiting state to runnable state
+	Thread Throws Interrupted Exception
+
+
+
