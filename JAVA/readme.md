@@ -282,3 +282,6 @@ Serializale interface:
 	pst.setInt(1,value); (1 -- column )
 	pst.executeUpdate() returns count of rows updated
 	resultSet
+
+[20/08/19](./Java-Code/src/code/D_20_08)
+[employee services using mysql](./Java-Code/src/code/D_20_08/EmployeSql/MainEmp.java)
