@@ -325,6 +325,16 @@ Thread LifeCycle
 ![alt image](https://html2-f.scribdassets.com/29sfe6c1s05h4ien/images/463-34429d581e.jpg)
 
 
-## Swing
-
+## [Swing](./Java-Code/src/code/D_21_08/swing/MyFrame.java)
+	Architicture
+		Model - View - Controller
+	package
+		javax.swing
+					.border
+					.event
+					.*
+	throws HeadlessException -- (if not supported by os)
+	flowLayout -- (puts the component one after another)
+	Delegation Pattern
+	event -- > event Listener --> event Handler
 
