@@ -254,7 +254,7 @@ Serializale interface:
 
 ## [Vector](./Java-Code/src/code/D_19_08/List/Vectors.java)
 
-## Comparable
+## [Comparable](./Java-Code/src/code/D_19_08/Student/Student.java)
 	interface which helps in ordering of collections 
 	have to override compareTo()
 	used on unordered collection(Set)
