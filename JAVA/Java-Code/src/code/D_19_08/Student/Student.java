@@ -56,8 +56,6 @@ public class Student implements Comparator<Object> {
 			return 1;
 	}
 	
-
-
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", id=" + id + ", gpa=" + gpa + "]";
