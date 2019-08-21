@@ -321,7 +321,7 @@ Thread LifeCycle
 	Thread Throws Interrupted Exception
 
 
-## Synchronization
+## [Synchronization](./Java-Code/src/code/D_20_08/ThreadSync/MainThreadSync.java)
 ![alt image](https://html2-f.scribdassets.com/29sfe6c1s05h4ien/images/463-34429d581e.jpg)
 
 
