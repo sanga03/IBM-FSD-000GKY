@@ -16,7 +16,7 @@ public Rs2xmlConfig() throws SQLException {
 }
 public ResultSet getRset() throws SQLException {
 	Statement st= conn.createStatement();
-	ResultSet rset =st.executeQuery("select id as 'ID' ,fname as 'First Name' ,lname as 'Last Name', salary as 'Salary' from emp");
+	ResultSet rset =st.executeQuery("select id as 'ID' ,fname as 'First Name' ,lname as 'Last Name', salary as 'Salary' from Employee");
 	return rset;
 }
 

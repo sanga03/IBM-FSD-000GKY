@@ -14,7 +14,7 @@ public class SimpleEncrypt {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(fout));
 			int data;
 			String line;
-			int vowel = 0;
+			int vowel= 0;
 			while ((line = reader.readLine()) != null) {
 				for (int i = 0; i < line.length(); i++) {
 					if (this.checkVowel(line.charAt(i)))

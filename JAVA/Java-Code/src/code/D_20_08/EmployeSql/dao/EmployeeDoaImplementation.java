@@ -34,7 +34,7 @@ public class EmployeeDoaImplementation implements EmployeeDao {
 	@Override
 	public void createEmployee(Employee emp) {
 		try {
-			pst = conn.prepareStatement("insert into emp values(?,?,?,?)");
+			pst = conn.prepareStatement("insert into Employee values(?,?,?,?)");
 			pst.setInt(1, emp.getId());
 			pst.setString(2, emp.getFirstName());
 			pst.setString(3, emp.getLastName());
@@ -52,7 +52,7 @@ public class EmployeeDoaImplementation implements EmployeeDao {
 		List<Employee> list = new ArrayList<Employee>();
 		try {
 			st = conn.createStatement();
-			resultSet = st.executeQuery("select * from emp");
+			resultSet = st.executeQuery("select * from Employee");
 			while (resultSet.next()) {
 				list.add(new Employee(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3),
 						resultSet.getInt(4)));
@@ -69,7 +69,7 @@ public class EmployeeDoaImplementation implements EmployeeDao {
 	public Employee getEmployeeById(int id) {
 		// TODO Auto-generated method stub
 		try {
-			pst = conn.prepareStatement("select * from emp where id=?");
+			pst = conn.prepareStatement("select * from Employee where id=?");
 			pst.setInt(1, id);
 			resultSet = pst.executeQuery();
 			while(resultSet.next()) {
@@ -87,7 +87,7 @@ public class EmployeeDoaImplementation implements EmployeeDao {
 	@Override
 	public boolean updateEmployee(Employee emp) {
 		try {
-			pst = conn.prepareStatement("update emp  set fname=? ,lname=?, salary=? where id=?");
+			pst = conn.prepareStatement("update Employee  set fname=? ,lname=?, salary=? where id=?");
 			pst.setString(1, emp.getFirstName());
 			pst.setString(2, emp.getLastName());
 			pst.setInt(3, emp.getSalary());
@@ -108,7 +108,7 @@ public class EmployeeDoaImplementation implements EmployeeDao {
 	@Override
 	public boolean deleteEmployee(int id) {
 		try {
-			pst = conn.prepareStatement("delete from emp where id=?");
+			pst = conn.prepareStatement("delete from Employee where id=?");
 			pst.setInt(1, id);
 			int r = pst.executeUpdate();
 			if (r > 0) {
