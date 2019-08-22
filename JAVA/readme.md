@@ -338,3 +338,46 @@ Thread LifeCycle
 	Delegation Pattern
 	event -- > event Listener --> event Handler
 
+[22/08/19](./Java-Code/src/code/D_22_08/)
+## I/O streams
+	java.lang.io
+	Stream 				ByteStream				Character Stream
+	Source Stream 		InputStream					reader
+	Sink streams        OutputStream				writer
+
+	InputStream:
+	int read()
+	int read(bytes[] buff)
+	int read(bytes[],int offset,int length)
+	void close()
+	int available()
+	long skip(long n)
+	boolean markSupported()
+	void mark(int readlimit)
+	void reset()
+
+	OutputStream:
+	void write(int c)
+	void write(bytes[] buff,int c)
+	void write()
+	void flush()
+	void close()
+
+	Node Streams
+
+	type 		character 				Byte
+
+	File      	FileReader				FileInputStream
+				FileWriter				FileOutputStream
+
+	Memory  	CharArrayReader			ByteArrayInputStream
+	Array  		CharArrayWriter			ByteArrayOutputStream
+
+	Memory  	StringReader
+	Str			StringWriter()					N/A
+
+	Pipe 		PipedReader				PipedInputStream
+				PipedWriter 			PipedOutputStream
+[File input Output](./Java-Code/src/code/D_22_08/FileIO/MainFileIO.java)
+[JFrame File input Output](./Java-Code/src/code/D_22_08/FileIO/FrameWR/MainWr.java)
+

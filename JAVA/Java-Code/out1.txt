@@ -1,0 +1,7 @@
+concept of child class(sub class) inheriting from parent class public class Person(){ protected String name; }
+ public class Man extends Person(){ private String mustache; } 
+ Dynamic Method Despaching Person p=null;
+  p=new Student() p=new Employee() #can only be accesible which are common on parent and child class (overridden)
+   p.getClass().getName() // gives the name of class package.ClassName
+    @Override same method name as parent but different functionality with the child
+constructors cannot be overridden but can be called using super

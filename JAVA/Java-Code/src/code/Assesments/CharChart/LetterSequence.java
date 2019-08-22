@@ -15,6 +15,7 @@ public class LetterSequence {
 		
 		char[] arr= Sentence.toCharArray();
 		for(Character a:arr) {
+			if(a!=' ' && a!='\n')
 			if(treeMap.containsKey(a)) {
 			treeMap.put(a, treeMap.get(a)+1);
 			}else
