@@ -48,18 +48,18 @@ public class MainWR extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new MigLayout("", "[][][][][][grow]", "[][][grow]"));
-		
+
 		JButton btnSav = new JButton("Save");
 		JTextArea textArea = new JTextArea();
 		contentPane.add(textArea, "cell 2 0 4 3,grow");
 		btnSav.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-		
+
 				try {
 					FileOutputStream fout = new FileOutputStream(new File("temp.txt"));
 					char[] a = textArea.getText().toString().toCharArray();
-					for(char l:a ) {
-						fout.write((int)l);
+					for (char l : a) {
+						fout.write((int) l);
 					}
 					fout.write(-1);
 					fout.close();
@@ -75,18 +75,16 @@ public class MainWR extends JFrame {
 			}
 		});
 		contentPane.add(btnSav, "cell 0 0");
-		
-		
-		
+
 		JButton btnRead = new JButton("Read");
 		btnRead.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					FileInputStream fin = new FileInputStream(new File("temp.txt"));
-					String str=new String();
+					String str = new String();
 					int c;
-					while((c=fin.read())!=-1) {
-						str+=(char)c;
+					while ((c = fin.read()) != -1) {
+						str += (char) c;
 					}
 					textArea.setText(str);
 				} catch (FileNotFoundException e1) {
@@ -96,7 +94,7 @@ public class MainWR extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
+
 			}
 		});
 		contentPane.add(btnRead, "cell 0 1");

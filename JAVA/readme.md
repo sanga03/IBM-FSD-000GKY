@@ -378,6 +378,7 @@ Thread LifeCycle
 
 	Pipe 		PipedReader				PipedInputStream
 				PipedWriter 			PipedOutputStream
-[File input Output](./Java-Code/src/code/D_22_08/FileIO/MainFileIO.java)
-[JFrame File input Output](./Java-Code/src/code/D_22_08/FileIO/FrameWR/MainWr.java)
+### [File input Output](./Java-Code/src/code/D_22_08/FileIO/MainFileIO.java)
+### [JFrame File input Output](./Java-Code/src/code/D_22_08/FileIO/FrameWR/MainWR.java)
+### [Buffer Reader Writer](./Java-Code/src/code/D_22_08/FileIO/Buffer/SimpleEncrypt.java)
 
