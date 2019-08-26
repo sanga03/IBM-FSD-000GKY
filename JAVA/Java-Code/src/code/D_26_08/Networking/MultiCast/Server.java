@@ -65,6 +65,8 @@ public class Server extends JFrame {
 		JButton btnStartServer = new JButton("start server");
 		btnStartServer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
+			
 				byte[] buff =new byte[1024];
 					DatagramPacket dp = new DatagramPacket(buff, buff.length, group, portnumber);
 					try {
@@ -78,12 +80,8 @@ public class Server extends JFrame {
 					
 					textArea.setText(msg);
 					System.out.println(msg);
-					try {
-						Thread.sleep(10000);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+
+		
 				}
 				
 				
@@ -92,7 +90,9 @@ public class Server extends JFrame {
 		contentPane.add(btnStartServer, "cell 6 0");
 		
 		 textArea = new JTextArea();
+		 
 		contentPane.add(textArea, "cell 0 1 7 3,grow");
-	}
+		
+		}
 
 }

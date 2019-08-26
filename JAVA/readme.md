@@ -410,3 +410,19 @@ Thread LifeCycle
 	it is a unit testing development
 	test driven development
 		is a software development technique that invoves repeatedly writing test cases
+
+## web application
+	html over http
+	cgi
+	servlets
+	jsp
+	xml
+	struts
+	javaserver faces 
+
+
+## [servlet](./Servlet_demo/src/code/D_28_08_19/servlet/Soccer_list.java)
+	is java component that executes on server
+	process http
+	genereate http response
+	web container is spacial
