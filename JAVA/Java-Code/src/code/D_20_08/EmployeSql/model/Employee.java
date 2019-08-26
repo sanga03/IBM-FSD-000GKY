@@ -44,5 +44,9 @@ public int getSalary() {
 public void setSalary(int salary) {
 	this.salary = salary;
 }
+@Override
+public String toString() {
+	return  id + "," + firstName + "," + lastName + "," + salary;
+}
 
 }

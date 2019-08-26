@@ -389,3 +389,24 @@ Thread LifeCycle
 ## [Serializable](./Java-Code/src/code/D_22_08/Serilizable/EmployeeSerialized.java)
 	transient -- (ignore the object)
 
+[23/08/19](./Java-Code/src/code/D_23_08)
+
+### [Networking](./Java-Code/src/code/D_23_08/Networking/)
+	socket:- software abstraction for input or output medium of communication
+			 communtication channel that enable you to transfer through perticular port
+			 an endpoint for communication between two machines
+			 java performs low-level networking throuh sockets
+	java.net
+		ServerSocket
+		MultiSocket
+		Socket
+
+[26-08-19](./Java-Code/src/code/D_26_08)
+
+
+### [Networking](./Java-Code/src/code/D_26_08/Networking/MultiCast)
+
+## [Junit testing](./Java-Code/src/code/D_26_08/JunitTesting)
+	it is a unit testing development
+	test driven development
+		is a software development technique that invoves repeatedly writing test cases

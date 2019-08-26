@@ -1,4 +1,4 @@
-package code.D_22_08.Seriazible;
+package code.D_23_08.Networking;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;

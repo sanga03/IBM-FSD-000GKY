@@ -1,4 +1,4 @@
-package code.D_22_08.Seriazible;
+package code.D_23_08.Networking;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
