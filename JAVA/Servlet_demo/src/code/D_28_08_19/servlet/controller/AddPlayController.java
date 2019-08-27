@@ -1,6 +1,9 @@
 package code.D_28_08_19.servlet.controller;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,6 +13,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+
+
+import code.D_27_08_19.Connection.ConnectionFactory;
+import code.D_27_08_19.Model.League;
 
 /**
  * Servlet implementation class AddPlay
@@ -36,9 +44,9 @@ public class AddPlayController extends HttpServlet {
 		if (season == "") {
 			err.add("please enter valid season");
 		}
-
+		int year = 0;
 		try {
-			int year = Integer.parseInt(request.getParameter("year").toString());
+			 year = Integer.parseInt(request.getParameter("year").toString());
 			if (year < 2008 || year > 2019) {
 				err.add("enter valid year");
 			}
@@ -53,6 +61,24 @@ public class AddPlayController extends HttpServlet {
 
 		if (err.isEmpty()) {
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("success.view");
+			
+			Connection conn = ConnectionFactory.getConnection();
+			try {
+				PreparedStatement pst =(PreparedStatement) conn.prepareStatement("insert into league (title,season,year,uid) values(?,?,?,?)");
+				pst.setString(1, league);
+				pst.setString(2, season);
+				pst.setInt(3, year);
+				pst.setInt(4, League.serialVersionUID++);
+				pst.executeUpdate();
+				
+			
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+			
+			
 			try {
 				requestDispatcher.forward(request, response);
 			} catch (ServletException | IOException e) {
@@ -63,7 +89,7 @@ public class AddPlayController extends HttpServlet {
 		} else {
 			request.setAttribute("err", err);
 
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("error.view");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("form.view");
 			try {
 				requestDispatcher.forward(request, response);
 			} catch (ServletException | IOException e) {
