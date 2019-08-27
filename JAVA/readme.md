@@ -426,3 +426,21 @@ Thread LifeCycle
 	process http
 	genereate http response
 	web container is spacial
+### http request
+![alt image](https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/images/HTTP_RequestMessageExample.png)
+![alt image](http://www.tcpipguide.com/free/diagrams/httpresponse.png)
+
+### web.xml
+	<servlet>
+	<display-name>
+	<servlet-name>
+	<servlet-class>package.classname
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>
+	<url-pattern>
+	</servlet-mapping>
+abstraction  --  	RequestDispatcher -- follows previous request(get or post)
+
+

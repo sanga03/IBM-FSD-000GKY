@@ -10,6 +10,9 @@ import java.net.MulticastSocket;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+
 import net.miginfocom.swing.MigLayout;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
@@ -79,6 +82,40 @@ public class Server extends JFrame {
 					String msg =new  String(dp.getData()).trim();
 					
 					textArea.setText(msg);
+					textArea.getDocument().addDocumentListener(new DocumentListener() {
+						
+						@Override
+						public void removeUpdate(DocumentEvent e) {
+							// TODO Auto-generated method stub
+							System.out.println("removed");
+						}
+						
+						@Override
+						public void insertUpdate(DocumentEvent e) {
+							// TODO Auto-generated method stub
+							System.out.println("insert");
+
+							
+							byte[] buff =new byte[1024];
+								DatagramPacket dp = new DatagramPacket(buff, buff.length, group, portnumber);
+								try {
+									serverSocket.receive(dp);
+								} catch (IOException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}
+								String msg =new  String(dp.getData()).trim();
+								
+								textArea.setText(msg);
+							
+						}
+						
+						@Override
+						public void changedUpdate(DocumentEvent e) {
+						System.out.println("changed");
+							
+						}
+					});
 					System.out.println(msg);
 
 		
