@@ -1,7 +1,11 @@
 package code.D_28_08.Filter;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.naming.Context;
 import javax.servlet.DispatcherType;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -11,8 +15,13 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
+
+import org.apache.coyote.http11.Http11AprProtocol;
 
 import code.D_28_08.DAO.EmployeeToDb;
+import code.D_28_08.Model.Employee;
 import code.D_28_08.Model.User;
 
 /**
@@ -26,6 +35,7 @@ import code.D_28_08.Model.User;
 		},urlPatterns = {"/admin.varify"})
 public class AdminFilter implements Filter {
 
+	List<Employee> l = null;
     /**
      * Default constructor. 
      */
@@ -48,14 +58,15 @@ public class AdminFilter implements Filter {
 	
 		String name =  request.getParameter("name");
 		String password= request.getParameter("password");
-		User user = new User(name, password);
+		System.out.println("Name ----"+name+" "+password);
+		boolean flag =false;
+		for(Employee emp : l) {
+			System.out.println(emp.getName()+emp.getPassword());
+			if(name.toString().equals(emp.getName().toString()) && password.equals(emp.getPassword().toString())) {
+				flag=true;
+			}
+		}
 		
-		request.setAttribute("user", user);
-		System.out.println(name+password);
-		
-		User user1= (User)request.getAttribute("user");
-		System.out.println(user1);
-		boolean flag=new EmployeeToDb().checkUser(user1.getName(),user1.getPassword());
 		if(flag) {
 			chain.doFilter(request, response);
 		}
@@ -73,7 +84,9 @@ public class AdminFilter implements Filter {
 	 * @see Filter#init(FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		// TODO Auto-generated method stub
+		Object o=fConfig.getServletContext().getAttribute("userList");
+		l=(ArrayList<Employee>)o;
+		
 	}
 
 }

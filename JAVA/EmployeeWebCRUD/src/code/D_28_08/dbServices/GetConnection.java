@@ -22,6 +22,7 @@ public class GetConnection {
 		Context context;
 		try {
 			context = new InitialContext();
+			
 			Object o = context.lookup("java:/comp/env/jdbc/mysql");
 			dataSource = (DataSource)o;
 			connection = dataSource.getConnection();
