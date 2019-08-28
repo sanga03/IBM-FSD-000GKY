@@ -1,4 +1,4 @@
-package code.D_27_08_19.Connection;
+package code.D_28_08.dbServices;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -8,33 +8,34 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-
-// connection facory
-public abstract class ConnectionFactory {
+public class GetConnection {
 
 	private static DataSource dataSource;
-	private static Connection connection;
-private ConnectionFactory() {
-	// TODO Auto-generated constructor stub
-}
+	private static Connection connection=null;
+	private GetConnection() {
+				
+	}
+	
 	
 	public static Connection getConnection() {
 		
+		Context context;
 		try {
-			Context context = new InitialContext();
+			context = new InitialContext();
 			Object o = context.lookup("java:/comp/env/jdbc/mysql");
 			dataSource = (DataSource)o;
 			connection = dataSource.getConnection();
-			
-		return connection;
-		} catch (NamingException e) {
+			return connection;
+		} catch (NamingException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
+			e1.printStackTrace();
+		}
+		 catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
-		
+		return connection;
 	}
+	
+	
 }
