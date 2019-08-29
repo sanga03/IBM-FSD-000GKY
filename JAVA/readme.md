@@ -444,7 +444,7 @@ Thread LifeCycle
 abstraction  --  	RequestDispatcher -- follows previous request(get or post)
 ### [Controller](./EmployeeWebCRUD/src/code/D_28_08/Controll/AddEmployee.java)
 	* A servlet which acts as a processing unit which makes descion to forward to spacific page
-[1](./EmployeeWebCRUD/src/code/D_28_08/Controll/doDelete.java)[2](./EmployeeWebCRUD/src/code/D_28_08/Controll/ViewList.java)
+[[1]](./EmployeeWebCRUD/src/code/D_28_08/Controll/doDelete.java)[[2]](./EmployeeWebCRUD/src/code/D_28_08/Controll/ViewList.java)
 
 ### [Filter](./EmployeeWebCRUD/src/code/D_28_08/Filter/AdminFilter.java)
 	*  called for every request and response 
@@ -461,4 +461,13 @@ abstraction  --  	RequestDispatcher -- follows previous request(get or post)
 			<%@include file="resp.jsp"%>  || <jsp:include page="resp.jsp"/>
 		</c:if>
 	
-[1](./Servlet_demo/WebContent/form-view.jsp)[2](./EmployeeWebCRUD/WebContent/name.jsp)
+[[1]]./Servlet_demo/WebContent/form-view.jsp) [[2]](./EmployeeWebCRUD/WebContent/name.jsp)
+
+### Cookie
+	Cookie c = new Cookie("yourname",name);
+	response.addCookie(c);
+
+	Cookie[] allCookies = request.getCookies();
+	if(allCookies[i].getName().equals("yourname")){
+		name = allCookies[i].getValue();
+	}
