@@ -71,7 +71,9 @@ public class AdminFilter implements Filter {
 			chain.doFilter(request, response);
 		}
 		else {
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("err.html");
+			request.setAttribute("error","Invalid Credentials");
+			request.setAttribute("name",name);
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
 			requestDispatcher.forward(request, response);
 		}
 
@@ -85,7 +87,9 @@ public class AdminFilter implements Filter {
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		Object o=fConfig.getServletContext().getAttribute("userList");
-		l=(ArrayList<Employee>)o;
+		@SuppressWarnings("unchecked")
+		ArrayList<Employee> o2 = (ArrayList<Employee>)o;
+		l=o2;
 		
 	}
 

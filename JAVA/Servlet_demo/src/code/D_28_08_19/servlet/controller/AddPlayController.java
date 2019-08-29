@@ -88,8 +88,9 @@ public class AddPlayController extends HttpServlet {
 
 		} else {
 			request.setAttribute("err", err);
-
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("form.view");
+//			RequestDispatcher requestDispatcher = request.getRequestDispatcher("form.view");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("form-view.jsp");
+			
 			try {
 				requestDispatcher.forward(request, response);
 			} catch (ServletException | IOException e) {
