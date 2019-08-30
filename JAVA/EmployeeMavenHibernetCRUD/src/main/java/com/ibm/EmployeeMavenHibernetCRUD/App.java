@@ -44,6 +44,22 @@ public class App {
 				}
 				break;
 			case 4:
+				int id2= sc.nextInt();
+				EmployeeModel ed = employeeServices.getEmployee(id2);
+				System.out.println("\nwhat you want to update:\n1:name\n2:pass\n3:email\n4:country\n");
+				int ch1=sc.nextInt();
+				switch(ch1) {
+				case 1:ed.setName(sc.next());
+				break;
+				case 2:ed.setPassword(sc.next());
+				break;
+				case 3:ed.setEmail(sc.next());
+				break;
+				case 4:ed.setCountry(sc.next());
+				break;
+				default:break;
+				}
+				employeeServices.updateEmployee(ed);
 				break;
 			case 5:
 				int id1 = sc.nextInt();

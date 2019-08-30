@@ -49,8 +49,10 @@ public class EmployeeDoa implements ServiceMethods {
 
 	@Override
 	public void updateEmployee(EmployeeModel empd) {
-		
-
+		Session session = factory.openSession();
+		session.getTransaction().begin();
+		session.merge(empd);
+		session.getTransaction().commit();
 	}
 
 	@Override
