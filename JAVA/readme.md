@@ -461,7 +461,7 @@ abstraction  --  	RequestDispatcher -- follows previous request(get or post)
 			<%@include file="resp.jsp"%>  || <jsp:include page="resp.jsp"/>
 		</c:if>
 	
-[[1]]./Servlet_demo/WebContent/form-view.jsp) [[2]](./EmployeeWebCRUD/WebContent/name.jsp)
+[[1]](./Servlet_demo/WebContent/form-view.jsp) [[2]](./EmployeeWebCRUD/WebContent/name.jsp)
 
 ### Cookie
 	Cookie c = new Cookie("yourname",name);
@@ -471,3 +471,68 @@ abstraction  --  	RequestDispatcher -- follows previous request(get or post)
 	if(allCookies[i].getName().equals("yourname")){
 		name = allCookies[i].getValue();
 	}
+
+
+[30-08-19]
+
+### Hibernate
+	* ORM tool Object Relational Maping
+	
+	* Java class -- > Hibernate -->Database Table
+
+	* Hibernate uses JDBC for all database communication
+#### Java Annotation
+	step 1: Map class to database table
+	@Entity
+	@Table(name="student")// table name
+	public class Student"
+	{
+
+	}
+	step 2: Map fields to database column
+	@Entity
+	@Table(name="student")// table name
+	public class Student"
+	{
+		@Id
+		@Column(name="id")
+		int id;
+	}
+
+
+### Two key player
+
+#### SessionFactory
+	reads the hibernate config file creates session objects
+	heavy object only create once in your app
+#### Session
+	wraps a JDBC connection main object used to save/retrive objects
+	short-lived object retrived from sessionFactory
+
+## MAVEN
+	1-> Developer --> maven POM(Project object model)
+	2-> Check local repo
+	3-> get from remote repo
+	4-> Save to local repo
+	5-> Build and run
+
+	G -group ID   Name of compony,group,org
+	A - Archive Type  name for this project
+	V- Version   a spacific release version like 1.0  2.0
+
+	<groupId>com.mycode</groupid>
+	<artifactId>mycoolapp</artifactId>
+	<version>1.0FINAL</version>
+
+	Directory Structute:
+		appName:
+			pom.xml
+			src
+				main
+					java --- code
+					resources	--- properties/config file
+					webapp	--- jsp/web config and other web assets
+				test   --- unit testing and properties
+					java
+					resources
+			target --- destination dir for compiled code created by maven 
