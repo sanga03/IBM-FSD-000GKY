@@ -1,7 +1,13 @@
 create table instructor_detail(id int primary key auto_increment,youtube_channel varchar(55),hobby varchar(55));
 drop table instructor_detail;
 use javadatabase;
+show tables;
 
+desc instructor;
+desc instructor_detail;
+
+select * from instructor;
+select * from instructor_detail;
 
 create table instructor(id int primary key auto_increment,name varchar(27),email varchar(20)
 ,instructor_detail_id int

@@ -499,6 +499,9 @@ abstraction  --  	RequestDispatcher -- follows previous request(get or post)
 		int id;
 	}
 
+### one to one hibernate
+	@OneToOne(cascade  = CascadeType.ALL)
+	@JoinColumn(name="instructor_detail_id")
 
 ### Two key player
 
@@ -536,3 +539,46 @@ abstraction  --  	RequestDispatcher -- follows previous request(get or post)
 					java
 					resources
 			target --- destination dir for compiled code created by maven 
+
+		org.apache.maven.archtype
+
+### pom conf for web hibernet maven
+	servlet
+	mysql
+	hibernet
+	jstl
+	lombok
+
+
+### Entity LifeCycle
+	Detatch -- if entity is not associated with hibernet
+	Merge -- if instance is detached from session then merge will reattach to session
+	Persist --  transition new instances to manage state
+	Remove -- Transistion managed entity to be removed next flush/commit
+	Refresh
+
+	@OneToOne(cascade-CascadeType.ALL)
+	@JoinColumn("instructo_detail_id")
+
+     By Directional
+	@OneToOne(mappedBy="instructor_detail_id")
+### 04-09-2019
+
+## Spring
+
+	popular framework for building java application
+	developed by rod jhonson 
+	initially simpler and lightweight alternative to J2EE
+	provides large number of helper classes
+
+	IOC --- inversion of Control
+	DI -- dependency Injuction 
+
+### Goals
+	java pojo
+	di to promote loose coupling
+	AOP
+
+## Core Container
+![alt image](https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/images/spring-overview.png)
+
