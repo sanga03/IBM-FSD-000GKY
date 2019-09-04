@@ -22,8 +22,8 @@
 
 ### inversion of  control
 	The approach of outsourcing the construction and management of objects
-### [Spring development process](./spring_demo_maven)
-	1-> configure your beans
+## [Spring development process](./spring_demo_maven)
+### 1-> [configure your beans](./spring_demo_maven/)
 		create bean package and add classes
 	2 -> create spring container
 		create springConfig (applicationContext.xml) with <bean name="coach" class"package.bean.CricCoach"></bean>
