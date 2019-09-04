@@ -562,23 +562,4 @@ abstraction  --  	RequestDispatcher -- follows previous request(get or post)
 
      By Directional
 	@OneToOne(mappedBy="instructor_detail_id")
-### 04-09-2019
-
-## Spring
-
-	popular framework for building java application
-	developed by rod jhonson 
-	initially simpler and lightweight alternative to J2EE
-	provides large number of helper classes
-
-	IOC --- inversion of Control
-	DI -- dependency Injuction 
-
-### Goals
-	java pojo
-	di to promote loose coupling
-	AOP
-
-## Core Container
-![alt image](https://docs.spring.io/spring/docs/4.2.x/spring-framework-reference/html/images/spring-overview.png)
 
