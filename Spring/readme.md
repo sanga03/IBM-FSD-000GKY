@@ -38,7 +38,16 @@
 	init is called first and distroy is called
 
 ### Spring develoment methods
-	XML
-	Annotation
-	java source
+#### [XML](#spring-development-process)
+#### Annotation(./spring_demo_annotation/src/main/java/applicationContext.xml)
+	use xml to set context 
+	<context:component-scan base-package="org.fsd.spring_demo_annotation.bean"></context:component-scan>
+	then use annotation 
+	@Component --- equ to  <bean name="coach" class"package.bean.CricCoach"></bean>
+	@Value		-- equ to  passing throug constructor
+	@AutoWired -- equ to ref
+
+#### java source(./spring_demo_annotation/src/main/java/org/fsd/spring_demo_annotation/bean/CoachConfig.java)
+	use AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(CoachConfig.class);
+	to set context
 

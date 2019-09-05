@@ -26,7 +26,7 @@ public class App {
 	List<CricCoach> clist= coachDoa.getCricCoach();
 	for(CricCoach c:clist) {
 		System.out.println(c);
-	}
+ 	}
 	
 	}
 }
