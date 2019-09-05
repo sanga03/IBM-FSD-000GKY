@@ -51,3 +51,66 @@
 	use AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(CoachConfig.class);
 	to set context
 
+### Model view Controller
+![alt image](https://static.javatpoint.com/sppages/images/spring-web-model-view-controller.png)
+
+	Front controller known as DispatcherServlet(part of Spring framework)
+	We will create Model Object View Templates and Controller
+#### Controller
+	contains Buisness logic
+	handle the request
+	store/retrive data
+	place data in model
+	send appropriate view template
+#### Model
+	contains data
+	store/retrive via backend
+	use spring bean
+	place your data in model
+#### view
+	supports view template 
+	jsp and servlets
+	tymeleaf goofer
+
+### Spring MVC Configuration
+#### Add Configuration file (WEB-INF/web.xml) 
+	configure spring MVC Dispatcher Servlet
+
+	<servlet>
+	<servlet-name>dispatcher</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<init-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>/WEB-INF/spring-mvc-demo-sevlet.xml</param-value>
+	</init-param>
+	<load-on-startup>1</>
+	</sevlet>
+	
+	Set up the URL mapping to Spring MVC Dispatcher Servlet
+	<servlet-mapping >
+	<servlet-name>dispatcher</servlet-name>
+	<url-pattern>/</url-pattern>
+
+### Development Process
+	create controller class
+	define controller model
+	
+	</servlet-maping>
+	
+#### Add Configuration file (WEB-INF/spring-mvc-demo-sevlet.xml)
+	add Support for spring companent scanning
+
+	<beans>
+	<context:component-scan base-package="org.fsd.springdemo">
+	</beans>
+
+	add support for conversion formatting and validation
+		
+		<mvc:annotaion-driven/>
+
+	configure spring MVC View Resolver
+		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/"/>
+		<property name="suffix" value=".jsp"/>
+		</bean>
+
