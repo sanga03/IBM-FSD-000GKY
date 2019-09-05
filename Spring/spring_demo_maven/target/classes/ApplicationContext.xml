@@ -10,7 +10,7 @@
 <property name="am" value="AM"></property>
 <property name="time" value="06:00"></property>
 </bean>
-<bean name="theCoach" class="org.fsd.spring_demo_maven.bean.CricCoach">
+<bean name="theCoach" class="org.fsd.spring_demo_maven.bean.CricCoach" init-method="getCric" destroy-method="overCric">
 <constructor-arg name="name" value="Sangamesh"></constructor-arg>
 <property name="practiceTimes" ref="prTimes"></property>
 <property name="loc" value="${loc}"></property>

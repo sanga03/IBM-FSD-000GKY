@@ -28,6 +28,12 @@ private PracticeTimes practiceTimes;
 	public String getName() {
 		return name;
 	}
+	public  void getCric() {
+		System.out.println("init called");
+	}
+	public void overCric() {
+		System.out.println("destroy cric");
+	}
 	
 	public PracticeTimes getPracticeTimes() {
 		return practiceTimes;

@@ -25,10 +25,20 @@
 ## [Spring development process](./spring_demo_maven)
 ### 1-> [configure your beans](./spring_demo_maven/)
 		create bean package and add classes
-	2 -> create spring container
-		create springConfig (applicationContext.xml) with <bean name="coach" class"package.bean.CricCoach"></bean>
-	3 retrive beans from spring container
+### 2 -> create spring container
+		
+	create springConfig (applicationContext.xml) with <bean name="coach" class"package.bean.CricCoach"></bean>
+### 3 -> retrive beans from spring container
 		import org.springframework.context.support.ClassPathXmlApplicationContext;
 		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext('applicationContext.xml')
 		Coach coach = context.getBean("coach",CricCoach.class)
+
+
+### [Bean Life Cycle](https://i2.wp.com/www.dineshonjava.com/wp-content/uploads/2012/06/Spring-Bean-Life-Cycle.jpg?w=530&ssl=1)
+	init is called first and distroy is called
+
+### Spring develoment methods
+	XML
+	Annotation
+	java source
 
