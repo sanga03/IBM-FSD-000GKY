@@ -1,5 +1,9 @@
 package org.fsd.spring_demo_annotation.bean;
 
+
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 @Component
@@ -32,9 +36,11 @@ public void setJtemplate(Jtemlete jtemplate) {
 		
 	}
 
-	public  void getCricCoach() {
+	public  List<CricCoach> getCricCoach() {
 		String query="select * from criccoach";
+		return jtemplate.query(query ,new CoachMapper());
 		
+				
 	}
 
 

@@ -25,6 +25,11 @@ public class CricCoach implements Coach {
 		return TeamName;
 	}
 
+	@Override
+	public String toString() {
+		return "CricCoach [TeamName=" + TeamName + ", loc=" + loc + "]";
+	}
+
 	public void setTeamName(String teamName) {
 		TeamName = teamName;
 	}
