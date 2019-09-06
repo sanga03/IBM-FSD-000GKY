@@ -1,10 +1,11 @@
-package org.fsd.spring_demo_annotation.bean;
+package com.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
+
 public class Jtemlete extends JdbcTemplate{
 
 	@Autowired

@@ -94,7 +94,7 @@
 ### Development Process
 	create controller class
 	define controller model
-	
+
 	</servlet-maping>
 	
 #### Add Configuration file (WEB-INF/spring-mvc-demo-sevlet.xml)
@@ -114,3 +114,9 @@
 		<property name="suffix" value=".jsp"/>
 		</bean>
 
+
+
+#### Spring MVC Form Tags:
+	form Tag 	
+
+	<%@ taglib prefix="form" uri="http://springframework.org/tags/form" %>
