@@ -426,3 +426,140 @@ Thread LifeCycle
 	process http
 	genereate http response
 	web container is spacial
+### http request
+![alt image](https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/images/HTTP_RequestMessageExample.png)
+![alt image](http://www.tcpipguide.com/free/diagrams/httpresponse.png)
+
+### web.xml
+	<servlet>
+	<display-name>
+	<servlet-name>
+	<servlet-class>package.classname
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>
+	<url-pattern>
+	</servlet-mapping>
+abstraction  --  	RequestDispatcher -- follows previous request(get or post)
+### [Controller](./EmployeeWebCRUD/src/code/D_28_08/Controll/AddEmployee.java)
+	* A servlet which acts as a processing unit which makes descion to forward to spacific page
+[[1]](./EmployeeWebCRUD/src/code/D_28_08/Controll/doDelete.java)[[2]](./EmployeeWebCRUD/src/code/D_28_08/Controll/ViewList.java)
+
+### [Filter](./EmployeeWebCRUD/src/code/D_28_08/Filter/AdminFilter.java)
+	*  called for every request and response 
+	*  acts as a gateway
+### [28/29-08-19 - Employee web CRUD](./EmployeeWebCRUD/src)
+### [jsp](./EmployeeWebCRUD/WebContent/index.jsp)
+	* An sevlet approach to embed in html
+	* scriplet   defined in  <%    %>
+	* directives  <@page import="j"> 
+	* expression   <%=request.getParameter("name")%> only used to print
+	* expression  language: ${}
+	* to include java core to tag <% taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+		<c:if test="${fn:length(param.username)>0}">
+			<%@include file="resp.jsp"%>  || <jsp:include page="resp.jsp"/>
+		</c:if>
+	
+[[1]](./Servlet_demo/WebContent/form-view.jsp) [[2]](./EmployeeWebCRUD/WebContent/name.jsp)
+
+### Cookie
+	Cookie c = new Cookie("yourname",name);
+	response.addCookie(c);
+
+	Cookie[] allCookies = request.getCookies();
+	if(allCookies[i].getName().equals("yourname")){
+		name = allCookies[i].getValue();
+	}
+
+
+[30-08-19]
+
+### Hibernate
+	* ORM tool Object Relational Maping
+	
+	* Java class -- > Hibernate -->Database Table
+
+	* Hibernate uses JDBC for all database communication
+#### Java Annotation
+	step 1: Map class to database table
+	@Entity
+	@Table(name="student")// table name
+	public class Student"
+	{
+
+	}
+	step 2: Map fields to database column
+	@Entity
+	@Table(name="student")// table name
+	public class Student"
+	{
+		@Id
+		@Column(name="id")
+		int id;
+	}
+
+### one to one hibernate
+	@OneToOne(cascade  = CascadeType.ALL)
+	@JoinColumn(name="instructor_detail_id")
+
+### Two key player
+
+#### SessionFactory
+	reads the hibernate config file creates session objects
+	heavy object only create once in your app
+#### Session
+	wraps a JDBC connection main object used to save/retrive objects
+	short-lived object retrived from sessionFactory
+
+## MAVEN
+	1-> Developer --> maven POM(Project object model)
+	2-> Check local repo
+	3-> get from remote repo
+	4-> Save to local repo
+	5-> Build and run
+
+	G -group ID   Name of compony,group,org
+	A - Archive Type  name for this project
+	V- Version   a spacific release version like 1.0  2.0
+
+	<groupId>com.mycode</groupid>
+	<artifactId>mycoolapp</artifactId>
+	<version>1.0FINAL</version>
+
+	Directory Structute:
+		appName:
+			pom.xml
+			src
+				main
+					java --- code
+					resources	--- properties/config file
+					webapp	--- jsp/web config and other web assets
+				test   --- unit testing and properties
+					java
+					resources
+			target --- destination dir for compiled code created by maven 
+
+		org.apache.maven.archtype
+
+### pom conf for web hibernet maven
+	servlet
+	mysql
+	hibernet
+	jstl
+	lombok
+
+
+### Entity LifeCycle
+	Detatch -- if entity is not associated with hibernet
+	Merge -- if instance is detached from session then merge will reattach to session
+	Persist --  transition new instances to manage state
+	Remove -- Transistion managed entity to be removed next flush/commit
+	Refresh
+
+	@OneToOne(cascade-CascadeType.ALL)
+	@JoinColumn("instructo_detail_id")
+
+     By Directional
+	@OneToOne(mappedBy="instructor_detail_id")
+

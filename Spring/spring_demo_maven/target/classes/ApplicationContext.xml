@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:property-placeholder location="cric.properties" />
+<bean name="prTimes" class="org.fsd.spring_demo_maven.bean.PracticeTimes">
+<property name="am" value="AM"></property>
+<property name="time" value="06:00"></property>
+</bean>
+<bean name="theCoach" class="org.fsd.spring_demo_maven.bean.CricCoach" init-method="getCric" destroy-method="overCric">
+<constructor-arg name="name" value="Sangamesh"></constructor-arg>
+<property name="practiceTimes" ref="prTimes"></property>
+<property name="loc" value="${loc}"></property>
+<property name="teamName" value="${team}"></property>
+</bean>
+<bean name="theBaseCoach" class="org.fsd.spring_demo_maven.bean.BaseBallCoach"></bean>
+
+</beans>

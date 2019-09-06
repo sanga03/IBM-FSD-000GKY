@@ -1,25 +1,27 @@
-package code.D_28_08_19.servlet;
+package code.D_28_08.Controll;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import code.D_28_08.DAO.EmployeeToDb;
+
 /**
- * Servlet implementation class AddPlay
+ * Servlet implementation class doDelete
  */
-@WebServlet("/addPlay")
-public class AddPlay extends HttpServlet {
+@WebServlet("/doDelete")
+public class doDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddPlay() {
+    public doDelete() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,17 +30,27 @@ public class AddPlay extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	doPost(request, response);	
+	doProcess(request,response);
+	}
+
+	private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		int id =  Integer.parseInt(request.getParameter("id"));
+		System.out.println(id);
+		int l =new EmployeeToDb().deleteEmployee(id);
+		if(l>0) {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("view.list");
+			requestDispatcher.forward(request, response);
+		}
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("err.html");
+		requestDispatcher.forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out =response.getWriter();
-		String name = request.getParameter("text");
-		out.println("welcome to "+name+" List");
+	doProcess(request, response);
 	}
 
 }

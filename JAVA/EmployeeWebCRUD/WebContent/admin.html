@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<div class="row">
+<div class="col">
+<h2>Add new Employee</h2>
+
+<form action="addEmployee">
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Name:</span>
+  </div>
+  <input type="text" class="form-control" name="name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  
+</div>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">password:</span>
+  </div>
+  <input type="password" class="form-control" name="password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  
+</div>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">email:</span>
+  </div>
+  <input type="email" class="form-control" name="email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Country:</span>
+  </div>
+  <select class="form-control"name="country">
+  <option value="un"></option>
+  <option value="INDIA">INDIA</option>
+  <option value="NEPAL">NEPAL</option>
+  <option value="AUS">AUSTRALIA</option>
+  <option value="USA">USA</option>
+  </select>
+</div>
+
+
+<input type="submit" class="btn primary" value="save employee">
+</form>
+
+<a href="view.list">view Employees</a>
+</div>
+<div class="col"></div>
+<div class="col"></div>
+</div>
+</body>
+</html>
