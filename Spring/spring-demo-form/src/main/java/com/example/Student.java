@@ -1,5 +1,6 @@
 package com.example;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 
 public class Student {
@@ -46,6 +47,11 @@ public void setLname(String lname) {
 	this.lname = lname;
 }
 
+@Override
+public String toString() {
+	return "Student [name=" + name + ", lname=" + lname + ", lc=" + lc + ", os=" + Arrays.toString(os) + ", country="
+			+ country + ", lang=" + lang + "]";
+}
 public Student() {
 
 	lc= new LinkedHashMap<String, String>();
