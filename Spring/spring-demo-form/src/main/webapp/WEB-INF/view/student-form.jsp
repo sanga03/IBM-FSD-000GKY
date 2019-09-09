@@ -8,6 +8,7 @@
 <title>Enter Details</title>
 </head>
 <body>
+
 <form:form action="search" modelAttribute="sea">
 <div class="form-group">
 	Search <form:input  class="form-control" path="sname" />

@@ -120,3 +120,18 @@
 	form Tag 	
 
 	<%@ taglib prefix="form" uri="http://springframework.org/tags/form" %>
+
+#### Hibernet Spring MVC
+	<bean id="sessionFactory" class="org.springframework.com.hibernate5.LocalSessionFactorBean">
+	<bean property name="dataSorce" ref="myDataSource">
+	<bean property name="packagesToScan" value="com.example.base"
+	dependency:
+		sevlet -4.0.1
+		jstl  - 1.2
+		web mvc - 5.1.9
+		hiberbate - Core --5.4.1,ORM -- 5.4.4,validator engine --6.0.4
+		spring transaction 5.1.9
+		lombok  -- 1.18.8
+		java annotaion -- 1.3.2
+		C3P0	-- 0.9
+
