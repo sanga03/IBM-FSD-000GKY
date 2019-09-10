@@ -165,3 +165,15 @@
 
 }
 
+### 10-09-19
+	CRM services - - Customer Services -- customer Dao -- database
+
+	pom.xml
+	all java config
+	config for database connection
+	hibernate entity class
+	doa
+	services
+
+### Spring Boot
+	
