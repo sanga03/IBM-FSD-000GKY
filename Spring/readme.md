@@ -135,3 +135,33 @@
 		java annotaion -- 1.3.2
 		C3P0	-- 0.9
 
+#### Representaional State Transfer
+	over HTTP
+		POST
+		GET
+		PUT
+		DELETE
+
+#### AbstractAnnotationConfigDispatcherServletInitializerherConfiguration
+			public class Myinitializer extends AbstractAnnotationConfigDispatcherServletInitializer  {
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+
