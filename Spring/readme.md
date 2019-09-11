@@ -177,3 +177,8 @@
 
 ### Spring Boot
 	
+jdbc:h2:mem:testdb
+org.h2.Driver
+sa
+
+onApplicationEvent
