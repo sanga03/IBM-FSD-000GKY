@@ -41,6 +41,16 @@ public void setJtemplate(Jtemlete jtemplate) {
 		return jtemplate.query(query ,new StudentMapper());
 				
 	}
+	public List<Student> searchName(String name) {
+		System.out.println(name);
+		String query="select * from student where name like '%"+name+"%' or lname like '%"+name+"%'";
+//		Object obj[]= {name};
+		return jtemplate.query(query, new StudentMapper());
+	}
 
-
+	public List<Student> searchEmail(String lang){
+		String query="select * from student where lang like '%"+lang+"%'";
+//		Object obj[]= {lang};
+		return jtemplate.query(query, new StudentMapper());
+	}
 }

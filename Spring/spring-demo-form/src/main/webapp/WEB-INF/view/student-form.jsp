@@ -8,6 +8,23 @@
 <title>Enter Details</title>
 </head>
 <body>
+
+<form:form action="search" modelAttribute="sea">
+<div class="form-group">
+	Search <form:input  class="form-control" path="sname" />
+	</div>
+<div class="form-group">	
+	<form:select  class="form-control" path="stype">
+	<form:option class="form-control"  value="NAME"/>
+	<form:option  class="form-control" value="Lang"/>
+	</form:select>
+	</div>
+	<div class="form-group">
+	<input type="submit"  class="btn btn-primary" value="search">
+</div>	
+</form:form>
+<br>
+
 <form:form action="performProcess" modelAttribute="student">
 First Name:<form:input path="name"/><br/>
 Last Name:<form:input path="lname"/></br>
