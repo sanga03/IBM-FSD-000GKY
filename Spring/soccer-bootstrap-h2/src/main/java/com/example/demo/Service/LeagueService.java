@@ -34,7 +34,9 @@ public class LeagueService {
 	}
 
 	public void updateLeague(League league) {
+		
 		leagueRepositry.save(league);
+		
 	}
 
 	public void deleteLeague(int id) {

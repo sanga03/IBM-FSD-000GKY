@@ -19,47 +19,46 @@
 <body>
 
 	<div class="container">
-	<div class="row">
-<div class="col-4">
-		<h3>Soccer League</h3>
-		<hr>
+		<div class="row">
+			<div class="col-4">
+				<h3>Soccer League</h3>
+				<hr>
 
-		<p class="h4 mb-4">Save League</p>
+				<p class="h4 mb-4">Save League</p>
 
-		<form action="#" th:action="@{/leagues/save}" th:object="${ll}"
-			method="POST">
+				<form action="#" th:action="@{/leagues/save}" th:object="${ll}"
+					method="POST">
+					<input type="hidden" th:field="*{id}"> <input type="text"
+						th:field="*{title}" class="form-control mb-4 col-4"
+						placeholder="Title">
 
-			<input type="text" th:field="*{title}"
-				class="form-control mb-4 col-4" placeholder="Title">
 
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Season</label>
+						</div>
+						<select class="custom-select" th:field="*{season}"
+							id="inputGroupSelect01">
+							<option selected value="Winter">Winter</option>
+							<option value="Automn">Automn</option>
+							<option value="Summer">Summer</option>
+							<option value="Rainy">Rainy</option>
 
-			<div class="input-group mb-3">
-				<div class="input-group-prepend">
-					<label class="input-group-text" for="inputGroupSelect01">Season</label>
-				</div>
-				<select class="custom-select" th:field="*{season}"
-					id="inputGroupSelect01">
-					<option selected value="Winter">Winter</option>
-					<option value="Automn">Automn</option>
-					<option value="Summer">Summer</option>
-					<option value="Rainy">Rainy</option>
+						</select>
+					</div>
+					<input type="text" th:field="*{year}"
+						class="form-control mb-4 col-4" placeholder="Year">
 
-				</select>
+					<button type="submit" class="btn btn-info col-2">Save</button>
+
+				</form>
+
+				<hr>
+				<a th:href="@{/leagues/}">Back to League List</a>
+
 			</div>
-			<input type="text" th:field="*{year}" class="form-control mb-4 col-4"
-				placeholder="Year">
-
-			<button type="submit" class="btn btn-info col-2">Save</button>
-
-		</form>
-
-		<hr>
-		<a th:href="@{/leagues/}">Back to League List</a>
-
-	</div>
-	</div>
-	<div class="col"></div>
-		
+		</div>
+		<div class="col"></div>
 </body>
 
 </html>
