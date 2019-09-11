@@ -175,10 +175,33 @@
 	doa
 	services
 
-### Spring Boot
-	
-jdbc:h2:mem:testdb
-org.h2.Driver
-sa
+### [Spring Boot](https://howtodoinjava.com/spring-boot2)
+	Spring Boot is a Spring framework module which provides RAD (Rapid Application Development) feature to the Spring framework. It is highly dependent on the starter templates feature which is very powerful and works flawlessly
 
+	With Spring boot, to create MVC application all you need to import is spring-boot-starter-web dependency.
+
+	you do not need to provide version information into child dependencies
+
+	Autoconfiguration is enabled with @EnableAutoConfiguration annotation. Spring boot auto configuration scans the classpath, finds the libraries in the classpath and then attempt to guess the best configuration for them, and finally configure all such beans.
+
+	Spring boot applications always include tomcat as embedded server dependency. It means you can run the Spring boot applications from the command prompt without needling complex server infrastructure.
+
+#### H2 database
+	inmemory database for Spring 
+	no need to create table scheme 
+	auto binded with @Entity
+
+	jdbc:h2:mem:testdb
+	org.h2.Driver
+
+#### [Thymeleaf](https://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html)
+	Thymeleaf is a Java XML/XHTML/HTML5 template engine that can work both in web and non-web environments. It is better suited for serving XHTML/HTML5 at the view layer of MVC-based web applications, but it can process any XML file even in offline environments. It provides full Spring Framework integration.
+
+
+	included in html by
+	<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	then use th namespace
+	<th:foreach>
+[example 1](./soccer-bootstrap-h2/src/main/resources/templates/league/list.html)
+[example 2](./soccer-bootstrap-h2/src/main/resources/templates/league/add-form.html)
 onApplicationEvent
