@@ -12,5 +12,17 @@ public class Direction {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 private int id;
-private Clob Directions;
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getDirections() {
+	return Directions;
+}
+public void setDirections(String directions) {
+	Directions = directions;
+}
+private String Directions;
 }

@@ -18,5 +18,29 @@ public class Ingredent {
 	@ManyToOne
 	@JoinColumn
 	private Recipe recipe;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getAmount() {
+		return amount;
+	}
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+	public String getDesc() {
+		return Desc;
+	}
+	public void setDesc(String desc) {
+		Desc = desc;
+	}
+	public Recipe getRecipe() {
+		return recipe;
+	}
+	public void setRecipe(Recipe recipe) {
+		this.recipe = recipe;
+	}
 
 }

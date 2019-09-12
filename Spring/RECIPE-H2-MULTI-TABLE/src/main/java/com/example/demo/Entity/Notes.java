@@ -12,5 +12,17 @@ public class Notes {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private Clob recipenotes;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getRecipenotes() {
+		return recipenotes;
+	}
+	public void setRecipenotes(String recipenotes) {
+		this.recipenotes = recipenotes;
+	}
+	private String recipenotes;
 }

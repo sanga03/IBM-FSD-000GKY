@@ -35,7 +35,7 @@ public class HomeController {
 	public String listMenu(Model model) {
 	List<Recipe> recipes = recipeService.getAllRecipe();
 	model.addAttribute("recipes",recipes);
-		return "home-list";
+		return "list-home";
 		
 	}
 }
