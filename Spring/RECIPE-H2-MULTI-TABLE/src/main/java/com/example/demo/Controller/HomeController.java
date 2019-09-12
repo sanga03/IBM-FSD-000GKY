@@ -1,0 +1,41 @@
+package com.example.demo.Controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.demo.Entity.Recipe;
+import com.example.demo.Service.DirectionService;
+import com.example.demo.Service.IngredentService;
+import com.example.demo.Service.NotesService;
+import com.example.demo.Service.RecipeService;
+
+@Controller
+@RequestMapping("/")
+public class HomeController {
+
+
+	private RecipeService recipeService;
+	private NotesService notesService;
+	private IngredentService ingredentService;
+	private DirectionService directionService;
+	
+	public HomeController(RecipeService recipeService, NotesService notesService, IngredentService ingredentService,
+			DirectionService directionService) {
+		super();
+		this.recipeService = recipeService;
+		this.notesService = notesService;
+		this.ingredentService = ingredentService;
+		this.directionService = directionService;
+	}
+	@GetMapping("/")
+	public String listMenu(Model model) {
+	List<Recipe> recipes = recipeService.getAllRecipe();
+	model.addAttribute("recipes",recipes);
+		return "home-list";
+		
+	}
+}
