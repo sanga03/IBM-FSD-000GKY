@@ -16,7 +16,7 @@ public class Ingredent {
 	private int amount;
 	private String Desc;
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(name = "recipeid")
 	private Recipe recipe;
 	public int getId() {
 		return id;

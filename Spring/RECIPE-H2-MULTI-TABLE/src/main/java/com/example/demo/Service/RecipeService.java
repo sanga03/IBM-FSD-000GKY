@@ -21,7 +21,9 @@ public class RecipeService {
 	public RecipeService() {
 		super();
 	}
-
+	public Recipe getById(int id) {
+		return recipeRepo.findById(id).get();
+	}
 	public List<Recipe> getAllRecipe() {
 		return recipeRepo.findAll();
 	}

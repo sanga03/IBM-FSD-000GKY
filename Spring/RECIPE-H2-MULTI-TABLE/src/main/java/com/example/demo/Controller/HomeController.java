@@ -6,7 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.Entity.Ingredent;
 import com.example.demo.Entity.Recipe;
 import com.example.demo.Service.DirectionService;
 import com.example.demo.Service.IngredentService;
@@ -36,6 +38,16 @@ public class HomeController {
 	List<Recipe> recipes = recipeService.getAllRecipe();
 	model.addAttribute("recipes",recipes);
 		return "list-home";
+		
+	}
+	@RequestMapping("/recipe/view")
+	public String viewReicpe(@RequestParam("id") Integer id,Model model)
+	{
+		Recipe recipe = recipeService.getById(id);
+		List<Ingredent> ings = ingredentService.findByRecipeid(id);
+		model.addAttribute("recipe",recipe);
+		model.addAttribute("ings",ings);
+		return "/recipe/view";
 		
 	}
 }

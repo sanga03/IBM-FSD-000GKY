@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+
+<title>Recipe View</title>
+</head>
+
+<body>
+
+	<div class="container">
+
+
+		<table class="table table-bordered table-striped">
+
+
+			<tr>
+				<td>ID</td>
+				<td th:text="${recipe.id}" />
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td th:text="${recipe.description}" />
+			</tr>
+			<tr th:each="ing : ${ings}">
+				<td> ingredent</td>
+				<td th:text="${ing.id}" />
+				<td th:text="${ing.Desc}" />
+				<td th:text="${ing.amount}" />
+				</tr>
+			<tr>
+				<td>CookTime</td>
+				<td th:text="${recipe.cooktime}" />
+			</tr>
+			<tr>
+				<td>Difficulty</td>
+				<td th:text="${recipe.difficulty}" />
+			</tr>
+
+			<tr>
+				<td>Prep-Time</td>
+				<td th:text="${recipe.preptime}" />
+			</tr>
+				<tr>
+				<td>serving</td>
+				<td th:text="${recipe.serving}" />
+			</tr>
+				<tr>
+				<td>url</td>
+				<td th:text="${recipe.url}" />
+			</tr>
+
+
+
+
+
+
+
+			<tr th:each="recipe : ${recipes}">
+				<td th:text="${recipe.id}" />
+				<td th:text="${recipe.description}" />
+				<td><a th:href="@{/recipe/view(id=${recipe.id})}">view</a></td>
+				<td><a th:href="@{/recipe/edit(id=${recipe.id})}"> Edit</a></td>
+				<td><a th:href="@{/recipe/delete(id=${recipe.id})}"> Delete</a></td>
+			</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+</body>
+</html>
+
