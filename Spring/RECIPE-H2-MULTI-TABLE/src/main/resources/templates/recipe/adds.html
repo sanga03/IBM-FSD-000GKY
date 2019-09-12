@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+
+<title>Save Recipe</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<h3>Recipe</h3>
+				<hr>
+
+				<p class="h4 mb-4">Save Recipe</p>
+
+				<form action="#" th:action="@{/recipe/save}" th:object="${recipe}"
+					method="POST">
+					<input type="hidden" th:field="*{id}"> <input type="text"
+						th:field="*{description}" class="form-control mb-4 col-4"
+						placeholder="description"> <input type="text"
+						th:field="*{cooktime}" class="form-control mb-4 col-4"
+						placeholder="cooktime"> <input type="text"
+						th:field="*{preptime}" class="form-control mb-4 col-4"
+						placeholder="preptime"> <input type="number"
+						th:field="*{serving}" class="form-control mb-4 col-4"
+						placeholder="serving"> <input type="text"
+						th:field="*{source}" class="form-control mb-4 col-4"
+						placeholder="source"> <input type="text" th:field="*{url}"
+						class="form-control mb-4 col-4" placeholder="url">
+
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Difficult</label>
+						</div>
+						<select class="custom-select" th:field="*{difficulty}"
+							id="inputGroupSelect01">
+							<option selected value="Medium">Medium</option>
+							<option value="Easy">Easy</option>
+							<option value="Hard">Hard</option>
+						</select>
+					</div>
+					<table>
+						<tr th:each="ing : ${ings}">
+							<td><input type="hidden" th:field="*{id}"
+								class="form-control mb-4 col-4"></td>
+							<td><input type="text" th:field="*{Desc}"
+								class="form-control mb-4 col-4" placeholder="Description">
+							</td>
+							<td><input type="number" th:field="*{amount}"
+								class="form-control mb-4 col-4" placeholder="Amount"></td>
+
+						</tr>
+					</table>
+					<button type="submit" class="btn btn-info col-2">Save</button>
+
+				</form>
+				<hr>
+				<a th:href="@{/}">Back to Recipe</a>
+
+			</div>
+		</div>
+		<div class="col"></div>
+</body>
+
+</html>
+

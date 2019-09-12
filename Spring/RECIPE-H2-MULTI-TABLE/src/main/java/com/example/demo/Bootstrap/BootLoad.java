@@ -45,9 +45,13 @@ private DirectionRepo directionRepo;
 		recipe.setCooktime("12");
 		recipe.setDescription("Halwa");
 		Ingredent ingredents = new Ingredent();
-		ingredents.setDesc("all");
+		ingredents.setDesc("sugar");
 		ingredents.setAmount(500);
 		ingredents.setRecipe(recipe);
+		Ingredent ingredent = new Ingredent();
+		ingredent.setDesc("gajar");
+		ingredent.setAmount(500);
+		ingredent.setRecipe(recipe);
 		System.out.println(ingredents);
 		recipe.getIngredent().add(ingredents);
 		Notes notes=new Notes();
@@ -58,7 +62,8 @@ private DirectionRepo directionRepo;
 		recipeRepo.save(recipe);
 		directionRepo.save(direction);
 		ingredentRepo.save(ingredents);
-		
+
+		ingredentRepo.save(ingredent);
 		notesRepo.save(notes);
 		
 	}

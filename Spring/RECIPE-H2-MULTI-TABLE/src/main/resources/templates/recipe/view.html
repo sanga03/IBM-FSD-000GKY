@@ -32,8 +32,14 @@
 				<td>Description</td>
 				<td th:text="${recipe.description}" />
 			</tr>
-			<tr th:each="ing : ${ings}">
+			<tr >
 				<td> ingredent</td>
+				<td >ID </td>
+				<td >DESC </td>
+				<td >AMOUNT </td>
+				</tr>
+			<tr th:each="ing : ${ings}">
+				<td> </td>
 				<td th:text="${ing.id}" />
 				<td th:text="${ing.Desc}" />
 				<td th:text="${ing.amount}" />

@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -50,4 +51,13 @@ public class HomeController {
 		return "/recipe/view";
 		
 	}
+	@RequestMapping("/recipe/add")
+	public String addRecipe(Model model) {
+		Recipe recipe=new Recipe();
+		List<Ingredent> ingreds = new ArrayList<Ingredent>();
+		model.addAttribute("recipe",recipe);
+		model.addAttribute("ings",ingreds);
+		return "recipe/adds";
+	}
+	
 }
