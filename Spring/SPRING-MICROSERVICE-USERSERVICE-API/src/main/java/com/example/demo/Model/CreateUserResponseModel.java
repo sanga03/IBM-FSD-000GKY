@@ -4,30 +4,31 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class CreateUserResponseModel {
-	private String userId;
+	
 	private String fname;
 	private String lname;
 	private String email;
+	private String userid;
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
 
 	public CreateUserResponseModel() {
 		super();
 	}
 
-	public CreateUserResponseModel(String userId, String fname, String lname, String email) {
+	public CreateUserResponseModel(String userid, String fname, String lname, String email) {
 		super();
-		this.userId = userId;
+		this.userid=userid;
 		this.fname = fname;
 		this.lname = lname;
 		this.email = email;
 	}
 
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
 
 	public String getFname() {
 		return fname;

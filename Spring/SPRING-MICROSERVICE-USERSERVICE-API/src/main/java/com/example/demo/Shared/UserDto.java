@@ -11,7 +11,7 @@ public class UserDto {
 	private String fname;
 	private String lname;
 	private String email;
-	private String user_id;
+	private String userid;
 	private String bCryptedPassword;
 	private String password;
 
@@ -39,12 +39,17 @@ public class UserDto {
 		this.email = email;
 	}
 
-	public String getuser_id() {
-		return user_id;
+
+
+
+
+
+	public String getUserid() {
+		return userid;
 	}
 
-	public void setuser_id(String user_id) {
-		this.user_id = user_id;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 
 	public String getbCryptedPassword() {

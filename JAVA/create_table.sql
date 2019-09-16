@@ -26,6 +26,9 @@ select * from criccoach;
 
 select * from cd;
 use javadatabase;
-create table crm(id int primary key auto_increment,fname varchar(27),lname varchar(30),email varchar(40));
+drop table user_table;
+create table user_table(id int primary key auto_increment,fname varchar(27) ,lname varchar(30),email varchar(40),password varchar(255) not null,userid varchar(255) unique);
 desc crm;
+select * from user_table;
+select * from crm;
 select * from crm;

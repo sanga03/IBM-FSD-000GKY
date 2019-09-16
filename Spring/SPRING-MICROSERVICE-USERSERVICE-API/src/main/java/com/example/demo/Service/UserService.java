@@ -22,11 +22,13 @@ public class UserService implements UserServiceInterface {
 
 	@Override
 	public UserDto createUser(UserDto userDto) {
-
+		userDto.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
+	String spass = UUID.randomUUID().toString();
+	System.out.println(spass);
+		userDto.setUserid(spass);
 		ModelMapper mapper = new ModelMapper();
 		mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-//		userDto.setPassword(bCryptPasswordEncoder.encode(userDto.getPassword()));
-		userDto.setuser_id(UUID.randomUUID().toString());
+		
 		UserEntity userEntity = mapper.map(userDto, UserEntity.class);
 		userRepo.save(userEntity);
 		UserDto tempDto = mapper.map(userEntity, UserDto.class);

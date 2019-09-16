@@ -47,6 +47,12 @@ public class UserEntity {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
 	@Column(name = "fname")
 	private String fname;
 	@Column(name = "lname")
@@ -55,4 +61,6 @@ public class UserEntity {
 	private String email;
 	@Column(name = "password")
 	private String password;
+	@Column(name="userid")
+	private String userid;
 }
