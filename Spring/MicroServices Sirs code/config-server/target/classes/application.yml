@@ -6,6 +6,5 @@ spring:
       server:
         git:
           uri: https://github.com/dnilay/java_fsd_2
-         
-          clone-on-start: true
+     
           

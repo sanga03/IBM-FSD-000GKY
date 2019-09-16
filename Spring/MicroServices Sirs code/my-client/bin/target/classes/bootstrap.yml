@@ -1,0 +1,10 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: my-client
+  cloud:
+    config:
+      server:
+        uri: http://localhost:8888
+        
