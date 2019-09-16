@@ -19,8 +19,8 @@ public class RecipeController {
 	private NotesService notesService;
 	private IngredentService ingredentService;
 	private DirectionService directionService;
-	
-public RecipeController(RecipeService recipeService, NotesService notesService, IngredentService ingredentService,
+
+	public RecipeController(RecipeService recipeService, NotesService notesService, IngredentService ingredentService,
 			DirectionService directionService) {
 		super();
 		this.recipeService = recipeService;
@@ -28,13 +28,12 @@ public RecipeController(RecipeService recipeService, NotesService notesService, 
 		this.ingredentService = ingredentService;
 		this.directionService = directionService;
 	}
-
-@GetMapping("/view/{id}")
-	public String viewReicpe(@RequestParam("id") Integer id,Model model)
-	{
+	
+	@GetMapping("/view/{id}")
+	public String viewReicpe(@RequestParam("id") Integer id, Model model) {
 		Recipe recipe = recipeService.getById(id);
-		model.addAttribute("recipe",recipe);
+		model.addAttribute("recipe", recipe);
 		return "view";
-		
 	}
+
 }

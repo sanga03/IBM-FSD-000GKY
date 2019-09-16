@@ -14,7 +14,7 @@ public class Ingredent {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private int amount;
-	private String Desc;
+	private String desc;
 	@ManyToOne
 	@JoinColumn(name = "recipeid")
 	private Recipe recipe;
@@ -31,10 +31,10 @@ public class Ingredent {
 		this.amount = amount;
 	}
 	public String getDesc() {
-		return Desc;
+		return desc;
 	}
 	public void setDesc(String desc) {
-		Desc = desc;
+		this.desc = desc;
 	}
 	public Recipe getRecipe() {
 		return recipe;

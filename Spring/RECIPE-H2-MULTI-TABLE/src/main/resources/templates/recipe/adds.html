@@ -12,7 +12,10 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous">
-
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <title>Save Recipe</title>
 </head>
 
@@ -57,7 +60,7 @@
 						<tr th:each="ing : ${ings}">
 							<td><input type="hidden" th:field="*{id}"
 								class="form-control mb-4 col-4"></td>
-							<td><input type="text" th:field="*{Desc}"
+							<td><input type="text" th:field="*{desc}"
 								class="form-control mb-4 col-4" placeholder="Description">
 							</td>
 							<td><input type="number" th:field="*{amount}"

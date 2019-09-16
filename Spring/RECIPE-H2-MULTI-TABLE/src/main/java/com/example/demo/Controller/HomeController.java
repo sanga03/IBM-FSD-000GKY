@@ -2,13 +2,11 @@ package com.example.demo.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.example.demo.Entity.Ingredent;
 import com.example.demo.Entity.Recipe;
 import com.example.demo.Service.DirectionService;
@@ -55,9 +53,12 @@ public class HomeController {
 	public String addRecipe(Model model) {
 		Recipe recipe=new Recipe();
 		List<Ingredent> ingreds = new ArrayList<Ingredent>();
+		ingreds.add(new Ingredent());
+		ingreds.add(new Ingredent());
+		ingreds.add(new Ingredent());
 		model.addAttribute("recipe",recipe);
 		model.addAttribute("ings",ingreds);
 		return "recipe/adds";
 	}
 	
-}
+	}
