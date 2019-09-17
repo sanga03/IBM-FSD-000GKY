@@ -24,39 +24,30 @@
 				<h3>Soccer League</h3>
 				<hr>
 
-				<p class="h4 mb-4">Save League</p>
+				<p class="h4 mb-4">Save Player</p>
 
-				<form action="#" th:action="@{/leagueSave}" th:object="${ll}"
+				<form action="#" th:action="@{/playerSave}" th:object="${ll}"
 					method="POST">
 					<input type="hidden" th:field="*{id}"> <input type="text"
-						th:field="*{title}" class="form-control mb-4 col-4"
-						placeholder="Title">
+						th:field="*{name}" class="form-control mb-4 col-4"
+						placeholder="Name">
+	 <input type="text"
+						th:field="*{team_name}" class="form-control mb-4 col-4"
+						placeholder="Team Name">
 
 
-					<div class="input-group mb-3">
-						<div class="input-group-prepend">
-							<label class="input-group-text" for="inputGroupSelect01">Season</label>
-						</div>
-						<select class="custom-select" th:field="*{season}"
-							id="inputGroupSelect01">
-							<option selected value="Winter">Winter</option>
-							<option value="Automn">Automn</option>
-							<option value="Summer">Summer</option>
-							<option value="Rainy">Rainy</option>
-
-						</select>
-					</div>
-					<input type="text" th:field="*{year}"
-						class="form-control mb-4 col-4" placeholder="Year">
+				
+					<input type="text" th:field="*{email}"
+						class="form-control mb-4 col-4" placeholder="Email">
 
 					<button type="submit" class="btn btn-info col-2">Save</button>
 
 				</form>
 
 				<hr>
-				<a th:href="@{/fetchLeagues/}">Back to League List</a>
-<br>
+				<a th:href="@{/fetchPlayers/}">Back to Player List</a><br>
 <a th:href="@{/}">Back to Home</a>
+
 			</div>
 		</div>
 		<div class="col"></div>

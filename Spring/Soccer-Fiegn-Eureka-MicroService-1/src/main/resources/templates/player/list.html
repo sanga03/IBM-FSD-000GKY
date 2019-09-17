@@ -24,7 +24,7 @@
 		<hr>
 
 		<!-- Add a button -->
-		<a th:href="@{/player/addForm}" class="btn btn-primary btn-sm mb-3">
+		<a th:href="@{/playerAddForm}" class="btn btn-primary btn-sm mb-3">
 			Add Player </a>
 
 
@@ -46,15 +46,16 @@
 					<td th:text="${Player.name}" />
 					<td th:text="${Player.team_name}" />
 					<td th:text="${Player.email}" />
-					<td><a th:href="@{/player/edit(id=${Player.id})}"> Edit</a></td>
-					<td><a th:href="@{/player/delete(id=${Player.id})}"> Delete</a></td>
+					<td><a th:href="@{/playerEdit(id=${Player.id})}"> Edit</a></td>
+					<td><a th:href="@{/playerDelete(id=${Player.id})}"> Delete</a></td>
 					
 				</tr>
 			</tbody>
 		</table>
 
 	</div>
-
+<br>
+<a th:href="@{/}">Back to Home</a>
 </body>
 </html>
 
