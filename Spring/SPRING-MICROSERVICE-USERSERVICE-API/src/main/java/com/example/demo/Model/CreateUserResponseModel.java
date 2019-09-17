@@ -4,11 +4,11 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class CreateUserResponseModel {
-	
 	private String fname;
 	private String lname;
 	private String email;
 	private String userid;
+
 	public String getUserid() {
 		return userid;
 	}

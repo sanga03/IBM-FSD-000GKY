@@ -44,6 +44,12 @@ public class UserDto {
 
 
 
+
+
+
+
+
+
 	public String getUserid() {
 		return userid;
 	}
