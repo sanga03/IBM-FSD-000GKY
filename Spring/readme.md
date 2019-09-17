@@ -258,7 +258,7 @@ NOTES
 	client
 	binding
 #### Zuul
-	@EnableZuulProxy
+	@EnableZuulProxy 
 		server:
 		  port: 8762
 		spring:

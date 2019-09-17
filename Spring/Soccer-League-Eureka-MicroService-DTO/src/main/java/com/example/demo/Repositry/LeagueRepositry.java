@@ -7,5 +7,6 @@ import com.example.demo.Entity.League;
 
 @Repository
 public interface LeagueRepositry extends CrudRepository<League, Integer> {
-
+//public List<League> findAllByOrderBytitleAsc();
+//	public Iterable<League> findByNameLike(String name)
 }

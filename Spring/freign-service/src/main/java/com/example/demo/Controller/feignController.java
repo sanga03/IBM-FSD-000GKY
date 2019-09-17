@@ -19,9 +19,9 @@ public class feignController {
 
 	  return ResponseEntity.ok(userFeign.findbyId(userid));
 	 }
+	
 	@GetMapping("/SearchByEmail/{email}")
 	 public ResponseEntity < ? > searchProduct(@PathVariable("email") String email) {
-
 	  return ResponseEntity.ok(userFeign.searchByEmail(email));
 	 }
 

@@ -1,0 +1,19 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: soccer-league-zuul
+eureka:
+  client:
+    service-url:
+      defualt-zone: http://localhost:8761/eureka
+zuul:
+  ignored-services:
+  - (*)
+  routes:
+    soccer-league: 
+      path: /league/**
+      service-id: SOCCER-LEAGUE
+    player:
+      path: /player/**
+      service-id: player

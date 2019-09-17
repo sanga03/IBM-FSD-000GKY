@@ -27,9 +27,15 @@ select * from criccoach;
 select * from cd;
 use javadatabase;
 drop table user_table;
-create table user_table(id int primary key auto_increment,fname varchar(27) ,lname varchar(30),email varchar(40),password varchar(255) not null,userId varchar(255) unique);
+create table user_table(id int primary key auto_increment,fname varchar(27) ,lname varchar(30),email varchar(40),password varchar(255) not null,userid varchar(255) unique);
 desc crm;
 select * from user_table;
 select * from crm;
 select * from crm;
-230035f2-6934-4cc0-a4be-ebd973b4090f 230035f2-6934-4cc0-a4be-ebd973b4090f
+
+create table item(id int primary key auto_increment,name varchar(50),price int
+,itemid varchar(255) unique);
+
+
+create table league(id int primary key auto_increment,title varchar(50),price int
+,itemid varchar(255) unique);
