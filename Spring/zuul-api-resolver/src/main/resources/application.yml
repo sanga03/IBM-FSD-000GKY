@@ -1,0 +1,19 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: zuul-api-resilver
+eureka:
+  client:
+    service-url:
+      defualt-zone: http://localhost:8761/eureka
+zuul:
+  ignored-services:
+  - (*)
+  routes:
+    user-ws: 
+      path: /user/**
+      service-id: user-ws
+    items:
+      path: /item/**
+      service-id: items

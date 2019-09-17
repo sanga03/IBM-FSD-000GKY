@@ -163,6 +163,8 @@
 		return null;
 	}
 
+
+
 }
 
 ### 10-09-19
@@ -237,8 +239,40 @@ RECIPE
 	URL
 	NOTES-ID
 	DIRECTION
-	
+
 NOTES
 	ID
 	RECIPE-NOTES
 	RECIPE-ID
+
+### Spring Security
+	authontication
+	authorization
+
+#### DEVELOPMENT PROCESS to configure security
+	create the spring security init
+	create spring security (@conf)
+### Eureka
+	
+	server
+	client
+	binding
+#### Zuul
+	@EnableZuulProxy
+		server:
+		  port: 8762
+		spring:
+		  application:
+		    name: zuul-api-resilver
+		eureka:
+		  client:
+		    service-url:
+		      defualt-zone: http://localhost:8761/eureka
+		zuul:
+		  ignored-services:
+		  - (*)
+		  routes:
+		    user-ws: 
+		      path: /user/**
+		      service-id: user-ws
+#### Feign clients
